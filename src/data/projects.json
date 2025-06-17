@@ -1,0 +1,14 @@
+[
+  {
+    "name": "zuno",
+    "project": "Zuno: A Social Media Site",
+    "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com inspired UI.",
+    "source": "/projectImages/Dashboard.png"
+  },
+  {
+    "name": "artist-portfolio",
+    "project": "Artist Portfolio",
+    "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 3s faster than the previous site.",
+    "source": "/projectImages/artistPortfolio/artwork.png"
+  }
+]
