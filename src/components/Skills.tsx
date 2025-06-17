@@ -5,7 +5,7 @@ export default function Skills() {
         <div className="col-span-full flex-col flex gap-3 md:gap-6 ">
           <h3 className="text-xl md:text-3xl w-full font-bold  ">My Skills</h3>
           <p className="max-w-3xl">
-            I've gained these skills through focused and intentional study
+            I&apos;ve gained these skills through focused and intentional study
             reinforced by real-world projects and applications. I take my
             personal development seriously, and I strive to develop and deepen
             my understanding of these skills every day.

@@ -19,9 +19,9 @@ export default function About() {
         </p>
 
         <p>
-          I've always loved being a part of a team. Software development let's
-          me balance my curiosity and desire for deep challenging work witht the
-          collaborative joys of team work.{" "}
+          I&apos;ve always loved being a part of a team. Software development
+          let&apos;s me balance my curiosity and desire for deep challenging
+          work witht the collaborative joys of team work.{" "}
         </p>
       </div>
     </div>
