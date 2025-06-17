@@ -7,13 +7,34 @@ export default function ProjectCard({
   project = "Project Name",
   description = "This is a brief description of the project that highlights its key features and functionalities.",
   link = "#",
+  inProgress = false,
 }: {
   source?: string;
   alt?: string;
   project?: string;
   description?: string;
   link?: string;
+  inProgress?: boolean;
 }) {
+  if (inProgress) {
+    return (
+      <div className="hidden md:flex  flex-col items-center gap-4 col-span-2 ">
+        <div className="flex w-full justify-center items-center rounded">
+          <div className="w-full h-[250px] relative">
+            <p className="w-full h-full flex items-center justify-center bg-black/30 rounded">
+              Project is in Progress
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-2 w-full max-w-2xl">
+          <h3 className="text-2xl font-bold">{project}</h3>
+          <p className="text-center">{description}</p>
+          <div className="font-bold text-lg text-gray-500">In Progress</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Link href={`/${link}`} className="flex flex-col items-start gap-4">
       <div className="flex w-full justify-center items-center rounded">

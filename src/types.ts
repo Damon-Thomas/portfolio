@@ -3,4 +3,5 @@ export type Project = {
   project: string;
   source?: string;
   description?: string;
+  inProgress?: boolean;
 };

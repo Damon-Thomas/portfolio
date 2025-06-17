@@ -22,6 +22,7 @@ export default function Building() {
               project={proj.project}
               source={proj.source}
               description={proj.description}
+              inProgress={proj.inProgress}
             />
           ))}
         </div>
