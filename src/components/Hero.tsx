@@ -11,11 +11,11 @@ export default function Hero({
   smallScreen: boolean;
   atTop: boolean;
 }) {
-  const chevronClass = `fill-[#ededed] absolute bottom-4 left-1/2 w-14 h-14 cursor-pointer z-50 transition-all duration-300 ${
+  const chevronClass = `fill-[#ededed] absolute bottom-4 sm:bottom-4 left-1/2 w-14 h-14 cursor-pointer z-50 transition-all duration-300 ${
     atTop
       ? "opacity-100 scale-100 pointer-events-auto animate-bounce-gentle"
       : "opacity-0 scale-0 pointer-events-none"
-  }`;
+  } ${smallScreen ? "bottom-16" : "bottom-4"}`;
 
   const handleChevronClick = () => {
     const targetPosition = window.innerHeight;

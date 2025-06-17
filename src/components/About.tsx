@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="bg-foreground text-background w-full flex  justify-center relative">
+    <div className="bg-foreground text-background w-full flex  justify-center relative px-4">
       <div className="py-4 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-3 md:gap-y-6 w-full max-w-6xl">
         <h3 className="text-xl md:text-3xl font-bold col-span-1 md:col-span-2 ">
           About me
@@ -21,7 +21,7 @@ export default function About() {
         <p>
           I&apos;ve always loved being a part of a team. Software development
           let&apos;s me balance my curiosity and desire for deep challenging
-          work witht the collaborative joys of team work.{" "}
+          work with the collaborative joys of team work.{" "}
         </p>
       </div>
     </div>

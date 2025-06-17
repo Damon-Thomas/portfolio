@@ -10,5 +10,11 @@
     "project": "Artist Portfolio",
     "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 3s faster than the previous site.",
     "source": "/projectImages/artistPortfolio/artwork.png"
+  },
+  {
+    "name": "messenger",
+    "project": "Messenger App",
+    "description": "A messaging app built with React and Vite, feautring profanity filters and a terminal inspired UI. Users can send messages, create groups, and manage their contacts.",
+    "source": "/projectImages/messanger/messaging-app-beta-six.vercel.app_messages.png"
   }
 ]
