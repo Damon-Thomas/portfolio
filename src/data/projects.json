@@ -3,7 +3,7 @@
     "name": "zuno",
     "project": "Zuno: A Social Media Site",
     "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com inspired UI.",
-    "source": "/projectImages/Dashboard.png",
+    "source": "/projectImages/zuno/Dashboard.png",
     "inProgress": false
   },
   {
@@ -31,7 +31,8 @@
     "name": "life-log",
     "project": "Life Log",
     "description": "My personal life planner that tracks everything in my life using text message commands to update notion databases. It includes a budget tracker, to-do list, and various life tracking features.",
-    "source": "",
+    "source1": "/projectImages/lifeLog/Screenshot_20250617-135240-left.png",
+
     "inProgress": true
   }
 ]

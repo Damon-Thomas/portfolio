@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Building from "../components/Building";
+import Collab from "@/components/Collab";
 
 export default function Home() {
   const [heroActive, setHeroActive] = useState(false);
@@ -46,6 +47,7 @@ export default function Home() {
       <About />
       <Skills />
       <Building />
+      <Collab />
     </div>
   );
 }
