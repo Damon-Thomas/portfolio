@@ -8,7 +8,6 @@ export default function ProjectCard({
   description = "This is a brief description of the project that highlights its key features and functionalities.",
   link = "#",
   inProgress = false,
-  source1,
 }: {
   source?: string;
   alt?: string;
@@ -16,7 +15,6 @@ export default function ProjectCard({
   description?: string;
   link?: string;
   inProgress?: boolean;
-  source1?: string;
 }) {
   if (inProgress) {
     return (
