@@ -3,17 +3,20 @@
     "name": "zuno",
     "project": "Zuno: A Social Media Site",
     "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com inspired UI.",
-    "source": "/projectImages/zuno/Dashboard.png",
+    "source": "/projectImages/zuno/Zuno-Dashboard.png",
     "inProgress": false,
     "expandedDescription": "Zuno is a social media platform that allows users to create profiles, post content, and engage in discussions through comments. It features OAuth for secure authentication, a user-friendly interface inspired by X.com, and supports infinite nested comments for deep conversations. The platform is designed to foster community interaction and provide a space for sharing ideas.",
-    "landingPage": "/projectImages/zuno/Zuno Homepage.png"
+    "landingPage": "/projectImages/zuno/Zuno-Homepage.png",
+    "website": "https://zuno.damonthomas.dev",
+    "github": "https://github.com/Damon-Thomas/Social-Media-Site"
   },
   {
     "name": "artist-portfolio",
     "project": "Artist Portfolio",
     "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 3s faster than the previous site.",
     "source": "/projectImages/artistPortfolio/artwork.png",
-    "inProgress": false
+    "inProgress": false,
+    "website": "https://client-production-f069.up.railway.app/"
   },
   {
     "name": "messenger",

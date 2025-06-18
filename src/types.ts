@@ -6,4 +6,6 @@ export type Project = {
   inProgress?: boolean;
   expandedDescription?: string;
   landingPage?: string;
+  website?: string;
+  github?: string;
 };

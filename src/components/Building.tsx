@@ -23,7 +23,6 @@ export default function Building() {
               source={proj.source}
               description={proj.description}
               inProgress={proj.inProgress}
-              source1={proj.source1}
             />
           ))}
         </div>
