@@ -10,15 +10,31 @@
     "website": "https://zuno.damonthomas.dev",
     "github": "https://github.com/Damon-Thomas/Social-Media-Site",
     "stack": ["React", "Next.js", "Typescript", "Node.js", "Postgres", "OAuth"],
-    "type": "Project"
+    "type": "Project",
+    "intent": "This project strips down the opionated approach of most social media websites and puts the power back in the hands of users. No algorithms or focus on going viral. Users see the the conversations of the people they want to listen to as they unfold. The focus is on live discussion and interaction, so likes or followers are used as a tool for communicating with others, not as a way to gain popularity. \n\n The design is heavily inspired by X.com and is not meant as a product but rather a showcase of my skills in building a social media platform with a deployed front-end, back-end, and database.",
+    "technical": "Social media platforms are complex systems that require careful consideration of user experience, security, and scalability. This tech stack proves a solid foundation that is modern and fast. The use of Next.js allows for server-side rendering, improving performance and SEO. The integration of OAuth provides a secure authentication method, while the use of Postgres ensures reliable data storage and retrieval. \n\n The infinite nested comments feature uses comment database models that follow a tree like structure. Each comment has a reference to it's parent comment, post, and next level of child comments. The comment structure allows for deep conversations without overwhelming the user interface.",
+    "screenshots": [
+      {
+        "name": "Zuno Dashboard",
+        "src": "/projectImages/zuno/Zuno-Dashboard.png"
+      },
+      {
+        "name": "Zuno Mobile",
+        "src": "/projectImages/zuno/zuno-dashboard(iPhone SE).png"
+      },
+      {
+        "name": "Zuno Connections",
+        "src": "/projectImages/zuno/zuno-connections.png"
+      }
+    ]
   },
   {
     "name": "artist-portfolio",
     "project": "Artist Portfolio",
-    "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 3s faster than the previous site.",
+    "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 6s faster than the previous site.",
     "source": "/projectImages/artistPortfolio/artwork.png",
     "inProgress": false,
-    "expandedDescription": "This artist portfolio website is a rebuilt version of their previous site. It features a custom CMS built with Strapi for easy content management. This website gives the artist more control and the new site boasts improved performance. Pages load 3 seconds faster than the old version, enhancing user experience and engagement.",
+    "expandedDescription": "This artist portfolio website is a rebuilt version of their previous site. It features a custom CMS built with Strapi for easy content management. This website gives the client more control and the new site boasts improved performance. Pages load 3 seconds faster than the old version, enhancing user experience and engagement.",
     "landingPage": "/projectImages/artistPortfolio/ArtistHomepage.png",
     "website": "https://client-production-f069.up.railway.app/",
     "stack": [
@@ -29,7 +45,23 @@
       "Postgres",
       "Strapi"
     ],
-    "type": "Contract"
+    "type": "Contract",
+    "intent": "The client was looking for an update to their portfolio site that was slow and didn't allow them to make desired additions. The goal was to create a simple, fast, and easy to manage site that would allow them to showcase their work and make updates without needing a developer.",
+    "technical": "Speed and SEO were very important to the client, so I decided to use Next.js. The Next.js framework allowed for server-side rendering where applicable, but also came with many tools for optimizing images and other assets. Strapi was chosen as the CMS because it is well supported, easy to use, and allows for custom content types. The use of Postgres ensures reliable data storage and retrieval, and Cloudinary was used for cloud storage so that content persits between restarts and to leverage the cloudinary CDN to increase photo loading speeds. \n\n The client's portfolio page speed improved from 6.8 seconds to 0.5 seconds, a significant improvement that enhances user experience. The new site is also more visually appealing and easier to navigate, making it a great showcase for the artist's work.",
+    "screenshots": [
+      {
+        "name": "Zuno Dashboard",
+        "src": "/projectImages/zuno/Zuno-Dashboard.png"
+      },
+      {
+        "name": "Zuno Mobile",
+        "src": "/projectImages/zuno/zuno-dashboard(iPhone SE).png"
+      },
+      {
+        "name": "Zuno Connections",
+        "src": "/projectImages/zuno/zuno-connections.png"
+      }
+    ]
   },
   {
     "name": "terminal-chat",
@@ -42,7 +74,23 @@
     "website": "https://messaging-app-beta-six.vercel.app/",
     "github": "https://github.com/Damon-Thomas/Messaging-App",
     "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
-    "type": "Project"
+    "type": "Project",
+    "intent": "This project strips down the opionated approach of most social media websites and puts the power back in the hands of users. No algorithms or focus on going viral. Users see the the conversations of the people they want to listen to as they unfold. The focus is on live discussion and interaction, so likes or followers are used as a tool for communicating with others, not as a way to gain popularity. \n\n The design is heavily inspired by X.com and is not meant as a product but rather a showcase of my skills in building a social media platform with a deployed front-end, back-end, and database.",
+    "technical": "Social media platforms are complex systems that require careful consideration of user experience, security, and scalability. This tech stack proves a solid foundation that is modern and fast. The use of Next.js allows for server-side rendering, improving performance and SEO. The integration of OAuth provides a secure authentication method, while the use of Postgres ensures reliable data storage and retrieval. \n\n The infinite nested comments feature uses comment database models that follow a tree like structure. Each comment has a reference to it's parent comment, post, and next level of child comments. The comment structure allows for deep conversations without overwhelming the user interface.",
+    "screenshots": [
+      {
+        "name": "Zuno Dashboard",
+        "src": "/projectImages/zuno/Zuno-Dashboard.png"
+      },
+      {
+        "name": "Zuno Mobile",
+        "src": "/projectImages/zuno/zuno-dashboard(iPhone SE).png"
+      },
+      {
+        "name": "Zuno Connections",
+        "src": "/projectImages/zuno/zuno-connections.png"
+      }
+    ]
   },
   {
     "name": "finding-fiasco",
@@ -55,7 +103,23 @@
     "website": "https://wheres-waldo-gilt.vercel.app/",
     "github": "https://github.com/Damon-Thomas/Wheres-Waldo",
     "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
-    "type": "Project"
+    "type": "Project",
+    "intent": "This project strips down the opionated approach of most social media websites and puts the power back in the hands of users. No algorithms or focus on going viral. Users see the the conversations of the people they want to listen to as they unfold. The focus is on live discussion and interaction, so likes or followers are used as a tool for communicating with others, not as a way to gain popularity. \n\n The design is heavily inspired by X.com and is not meant as a product but rather a showcase of my skills in building a social media platform with a deployed front-end, back-end, and database.",
+    "technical": "Social media platforms are complex systems that require careful consideration of user experience, security, and scalability. This tech stack proves a solid foundation that is modern and fast. The use of Next.js allows for server-side rendering, improving performance and SEO. The integration of OAuth provides a secure authentication method, while the use of Postgres ensures reliable data storage and retrieval. \n\n The infinite nested comments feature uses comment database models that follow a tree like structure. Each comment has a reference to it's parent comment, post, and next level of child comments. The comment structure allows for deep conversations without overwhelming the user interface.",
+    "screenshots": [
+      {
+        "name": "Zuno Dashboard",
+        "src": "/projectImages/zuno/Zuno-Dashboard.png"
+      },
+      {
+        "name": "Zuno Mobile",
+        "src": "/projectImages/zuno/zuno-dashboard(iPhone SE).png"
+      },
+      {
+        "name": "Zuno Connections",
+        "src": "/projectImages/zuno/zuno-connections.png"
+      }
+    ]
   },
   {
     "name": "life-log",

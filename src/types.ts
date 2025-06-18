@@ -1,3 +1,8 @@
+type Screenshot = {
+  src: string;
+  name: string;
+};
+
 export type Project = {
   name: string;
   project: string;
@@ -9,4 +14,8 @@ export type Project = {
   website?: string;
   github?: string;
   stack?: string[];
+  type?: string;
+  intent?: string;
+  technical?: string;
+  screenshots?: Screenshot[];
 };

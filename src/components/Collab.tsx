@@ -4,8 +4,10 @@ import { useState } from "react";
 
 export default function Collab({
   theme = "dark",
+  pad = true,
 }: {
   theme?: "dark" | "light";
+  pad?: boolean;
 }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -97,7 +99,7 @@ export default function Collab({
         theme === "dark"
           ? "bg-background text-foreground"
           : "bg-foreground text-background"
-      } w-full flex justify-center px-4`}
+      } w-full flex justify-center ${pad ? "px-4" : ""} `}
     >
       <div className="flex flex-col py-4 md:py-16 max-w-6xl w-full gap-3 md:gap-6">
         <div className="flex flex-col gap-1 md:gap-3">
