@@ -30,7 +30,7 @@ export default function ProjectCard({
           <div className="w-full h-[500px] flex justify-center gap-4 p-4">
             <div className="flex-1 relative max-w-[50%] flex justify-center">
               <Image
-                src={source1 || "/default-project-image.jpg"}
+                src={source || "/default-project-image.jpg"}
                 alt={alt || "Project Image"}
                 fill
                 className="object-contain"

@@ -8,7 +8,9 @@
     "expandedDescription": "Zuno is a social media platform that allows users to create profiles, post content, and engage in discussions through comments. It features OAuth for secure authentication, a user-friendly interface inspired by X.com, and supports infinite nested comments for deep conversations. The platform is designed to foster community interaction and provide a space for sharing ideas.",
     "landingPage": "/projectImages/zuno/Zuno-Homepage.png",
     "website": "https://zuno.damonthomas.dev",
-    "github": "https://github.com/Damon-Thomas/Social-Media-Site"
+    "github": "https://github.com/Damon-Thomas/Social-Media-Site",
+    "stack": ["React", "Next.js", "Typescript", "Node.js", "Postgres", "OAuth"],
+    "type": "Project"
   },
   {
     "name": "artist-portfolio",
@@ -16,27 +18,50 @@
     "description": "An updated portfolio website for an artist to feature their work. Built with a custom CMS for managing content and a simple design based on their old website. Page speed is a full 3s faster than the previous site.",
     "source": "/projectImages/artistPortfolio/artwork.png",
     "inProgress": false,
-    "website": "https://client-production-f069.up.railway.app/"
+    "expandedDescription": "This artist portfolio website is a rebuilt version of their previous site. It features a custom CMS built with Strapi for easy content management. This website gives the artist more control and the new site boasts improved performance. Pages load 3 seconds faster than the old version, enhancing user experience and engagement.",
+    "landingPage": "/projectImages/artistPortfolio/ArtistHomepage.png",
+    "website": "https://client-production-f069.up.railway.app/",
+    "stack": [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Node.js",
+      "Postgres",
+      "Strapi"
+    ],
+    "type": "Contract"
   },
   {
-    "name": "messenger",
-    "project": "Messenger App",
+    "name": "terminal-chat",
+    "project": "Terminal Chat",
     "description": "A messaging app built with React and Vite, feautring profanity filters and a terminal inspired UI. Users can send messages, create groups, and manage their contacts.",
     "source": "/projectImages/messanger/messaging-app-beta-six.vercel.app_messages.png",
-    "inProgress": false
+    "inProgress": false,
+    "expandedDescription": "This is a very simple, terminal-inspired messaging app that allows users to send messages, create groups, and manage contacts. It features a clean UI with a focus on functionality, including profanity filters to ensure a safe messaging environment. The app is built with React and Vite for a modern development experience. User's can easily navigate through conversations and manage their contacts on both desktop and mobile screens.",
+    "landingPage": "/projectImages/messanger/terminal-chat-home.png",
+    "website": "https://messaging-app-beta-six.vercel.app/",
+    "github": "https://github.com/Damon-Thomas/Messaging-App",
+    "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
+    "type": "Project"
   },
   {
     "name": "finding-fiasco",
     "project": "Finding Fiasco",
     "description": "A Where's Waldo style game where players find characters in a large, detailed image. The game features a timer, score tracking, and a variety of characters to find.",
     "source": "/projectImages/findingFiasco/wheres-waldo-game.png",
-    "inProgress": false
+    "inProgress": false,
+    "expandedDescription": "A Where's Waldo style game where players search for characters hidden in a large, detailed image. The game includes a timer to challenge players, score tracking to keep them engaged, and a variety of characters to find, making it a fun and interactive experience. The game is designed to be visually appealing and easy to play, with a focus on user engagement. ",
+    "landingPage": "/projectImages/findingFiasco/FindingFiascoHome.png",
+    "website": "https://wheres-waldo-gilt.vercel.app/",
+    "github": "https://github.com/Damon-Thomas/Wheres-Waldo",
+    "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
+    "type": "Project"
   },
   {
     "name": "life-log",
     "project": "Life Log",
     "description": "My personal life planner that tracks everything in my life using text message commands to update notion databases. It includes a budget tracker, to-do list, and various life tracking features.",
-    "source1": "/projectImages/lifeLog/Screenshot_20250617-135240-left.png",
+    "source": "/projectImages/lifeLog/Screenshot_20250617-135240-left.png",
 
     "inProgress": true
   }

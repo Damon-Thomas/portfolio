@@ -8,4 +8,5 @@ export type Project = {
   landingPage?: string;
   website?: string;
   github?: string;
+  stack?: string[];
 };
