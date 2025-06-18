@@ -20,7 +20,7 @@ export default function ProjectCard({
 }) {
   if (inProgress) {
     return (
-      <div className="hidden md:flex  items-center gap-4 col-span-2 ">
+      <div className="hidden md:flex  items-center gap-4 col-span-2 px-8">
         <div className="flex w-full justify-center items-center rounded">
           <div className="flex flex-col items-center gap-2 w-full max-w-2xl">
             <h3 className="text-2xl font-bold">{project}</h3>
@@ -33,7 +33,7 @@ export default function ProjectCard({
                 src={source1 || "/default-project-image.jpg"}
                 alt={alt || "Project Image"}
                 fill
-                className="object-contain  transition-transform duration-300 hover:scale-105"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 250px"
               />
             </div>

@@ -4,5 +4,6 @@ export type Project = {
   source?: string;
   description?: string;
   inProgress?: boolean;
-  source1?: string;
+  expandedDescription?: string;
+  landingPage?: string;
 };

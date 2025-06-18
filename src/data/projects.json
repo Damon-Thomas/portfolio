@@ -4,7 +4,9 @@
     "project": "Zuno: A Social Media Site",
     "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com inspired UI.",
     "source": "/projectImages/zuno/Dashboard.png",
-    "inProgress": false
+    "inProgress": false,
+    "expandedDescription": "Zuno is a social media platform that allows users to create profiles, post content, and engage in discussions through comments. It features OAuth for secure authentication, a user-friendly interface inspired by X.com, and supports infinite nested comments for deep conversations. The platform is designed to foster community interaction and provide a space for sharing ideas.",
+    "landingPage": "/projectImages/zuno/Zuno Homepage.png"
   },
   {
     "name": "artist-portfolio",

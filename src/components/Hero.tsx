@@ -44,7 +44,7 @@ export default function Hero({
   };
 
   return (
-    <div className="relative flex items-center justify-center w-full h-screen max-w-6xl">
+    <div className="relative flex items-center justify-center w-full min-h-screen max-h-screen max-w-6xl">
       {/* Background image (always visible) */}
       <Image
         src="/secta.ai_001.jpg"

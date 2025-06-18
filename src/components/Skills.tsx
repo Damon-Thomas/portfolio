@@ -32,8 +32,9 @@ export default function Skills() {
           <li>Tailwind CSS</li>
           <li>Express.js</li>
           <li>Prisma ORM</li>
-          <li>JWT | BCrypt | OAuth</li>
+          <li>JWT | OAuth</li>
           <li>Jest | SuperTest</li>
+          <li>Strapi CMS</li>
         </ul>
       </div>
     </div>
