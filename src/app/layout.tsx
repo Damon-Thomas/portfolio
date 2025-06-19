@@ -27,12 +27,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="apple-mobile-web-app-title" content="Damon" />
+
         <meta name="description" content={metadata.description ?? ""} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center`}
       >
         <div className="main w-screen h-screen bg-background">{children}</div>
+
+        <script
+          data-collect-dnt="true"
+          async
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+        ></script>
       </body>
     </html>
   );
