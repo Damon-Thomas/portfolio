@@ -18,4 +18,5 @@ export type Project = {
   intent?: string;
   technical?: string;
   screenshots?: Screenshot[];
+  challenges?: string;
 };

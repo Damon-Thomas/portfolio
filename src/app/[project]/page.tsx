@@ -1,7 +1,9 @@
 import Collab from "@/components/Collab";
 import IconRenderer from "@/components/IconRenderer";
+import Challenges from "@/components/project/Challenges";
 import Intent from "@/components/project/Intent";
 import LandingImage from "@/components/project/LandingImage";
+import OtherProjects from "@/components/project/OtherProjects";
 import ScreenGrabs from "@/components/project/ScreenGrabs";
 import Summary from "@/components/project/Summary";
 import Technical from "@/components/project/Technical";
@@ -24,6 +26,8 @@ export default async function ProjectPage({
         <Intent project={projectData} />
         <Technical project={projectData} />
         <ScreenGrabs project={projectData} />
+        <Challenges project={projectData} />
+        <OtherProjects project={projectData} />
         <Collab theme="light" pad={false} />
       </div>
     </div>
