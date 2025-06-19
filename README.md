@@ -6,4 +6,4 @@ This site was inspired by or with guidance from:
 - [Josh Comeau](https://www.joshwcomeau.com)
 - [Thomas Bosc](https://thomasbosc.com/)
 
-Design elements were used as learning references. All code and content are original.
+Design elements were used as learning references.
