@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <div className="bg-background text-foreground w-full flex justify-center px-4">
+    <div className="bg-background text-foreground w-full flex justify-center py-10 px-4">
       <div className="py-4 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-3 md:gap-y-6 w-full max-w-6xl">
         <div className="col-span-full flex-col flex gap-3 md:gap-6 ">
           <h3 className="text-xl md:text-3xl w-full font-bold  ">My Skills</h3>

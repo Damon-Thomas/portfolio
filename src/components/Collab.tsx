@@ -71,7 +71,7 @@ export default function Collab({
         // Handle validation errors
         setValidationErrors(data.details);
         setSubmitStatus("error");
-        setErrorMessage("Please correct the errors below.");
+        setErrorMessage("Please correct the errors above.");
       } else {
         setSubmitStatus("error");
         setErrorMessage(
@@ -101,8 +101,8 @@ export default function Collab({
           : "bg-foreground text-background"
       } w-full flex justify-center ${pad ? "px-4" : ""} `}
     >
-      <div className="flex flex-col py-4 md:py-16 max-w-6xl w-full gap-3 md:gap-6">
-        <div className="flex flex-col gap-1 md:gap-3">
+      <div className="flex flex-col md:flex-row py-10 md:py-16 max-w-6xl  w-full gap-10">
+        <div className="flex flex-col justify-start gap-2 h-full md:gap-6">
           <h3 className="text-xl md:text-3xl w-full font-bold">
             Want to Collaborate?
           </h3>
@@ -151,59 +151,60 @@ export default function Collab({
 
         <form
           onSubmit={handleSubmit}
-          className=" w-full grid grid-cols-1 md:grid-cols-2 gap-6"
+          className=" flex flex-col gap-2 min-w-1/2"
         >
-          <div className="flex flex-col gap-4 pb-5 justify-between">
-            <div className="flex-flex-col ">
-              <label htmlFor="name" className="block text-sm font-bold mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                maxLength={100}
-                className={`w-full px-4 py-2 bg-foreground border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-background ${
-                  validationErrors.name
-                    ? "border-red-500 focus:ring-red-400"
-                    : "border-gray-600"
-                }`}
-                placeholder="Your name"
-              />
-              {validationErrors.name && (
-                <p className="text-red-400 text-sm mt-1">
-                  {validationErrors.name}
-                </p>
-              )}
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="email" className="block text-sm font-bold mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                maxLength={254}
-                className={`w-full px-4 py-2 bg-foreground border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-background ${
-                  validationErrors.email
-                    ? "border-red-500 focus:ring-red-400"
-                    : "border-gray-600"
-                }`}
-                placeholder="your.email@example.com"
-              />
-              {validationErrors.email && (
-                <p className="text-red-400 text-sm mt-1">
-                  {validationErrors.email}
-                </p>
-              )}
+          <div className="flex flex-col gap-2 justify-start">
+            <div className="flex gap-4">
+              <div className="flex flex-1 flex-col ">
+                <label htmlFor="name" className="block text-sm font-bold mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  maxLength={100}
+                  className={`w-full px-4 py-2 bg-foreground border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-background ${
+                    validationErrors.name
+                      ? "border-red-500 focus:ring-red-400"
+                      : "border-gray-600"
+                  }`}
+                  placeholder="Your name"
+                />
+                {validationErrors.name && (
+                  <p className="text-red-400 text-sm mt-1">
+                    {validationErrors.name}
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-1 flex-col">
+                <label htmlFor="email" className="block text-sm font-bold mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  maxLength={254}
+                  className={`w-full px-4 py-2 bg-foreground border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-background ${
+                    validationErrors.email
+                      ? "border-red-500 focus:ring-red-400"
+                      : "border-gray-600"
+                  }`}
+                  placeholder="your.email@example.com"
+                />
+                {validationErrors.email && (
+                  <p className="text-red-400 text-sm mt-1">
+                    {validationErrors.email}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 
@@ -251,8 +252,18 @@ export default function Collab({
           </button>
 
           {submitStatus === "success" && (
-            <div className="p-4 bg-green-900/30 border border-green-500 rounded-lg">
-              <p className="text-green-400 text-sm">
+            <div
+              className={`p-4 ${
+                theme === "dark"
+                  ? "bg-green-900/30 border-green-500"
+                  : "bg-zinc-900/10 border-green-500"
+              }  border  rounded-lg`}
+            >
+              <p
+                className={`${
+                  theme === "dark" ? "text-green-400" : "text-green-900"
+                } text-sm`}
+              >
                 Thank you! Your message has been sent successfully.
               </p>
             </div>
@@ -265,8 +276,16 @@ export default function Collab({
           )}
 
           {submitStatus === "error" && (
-            <div className="p-4 bg-red-900/30 border border-red-500 rounded-lg">
-              <p className="text-red-400 text-sm">
+            <div
+              className={`p-4 ${
+                theme === "dark" ? "bg-red-900/30" : "bg-red-900/10"
+              }  border border-red-500 rounded-lg`}
+            >
+              <p
+                className={`${
+                  theme === "dark" ? "text-red-400" : "text-red-900"
+                } text-sm`}
+              >
                 {errorMessage ||
                   "Sorry, there was an error sending your message. Please try again."}
               </p>

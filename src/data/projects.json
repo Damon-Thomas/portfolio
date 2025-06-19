@@ -62,7 +62,8 @@
         "name": "Portfolio Books",
         "src": "/projectImages/artistPortfolio/artistPortfolioBooks.png"
       }
-    ]
+    ],
+    "challenges": "The main challenge was optimizing image loading and page speed, as the previous site was very slow. Migrating content to Strapi and integrating Cloudinary for image hosting required careful planning to ensure all assets were transferred and loaded efficiently. Achieving a 6-second improvement in page load time involved extensive performance testing, image optimization, and tuning Next.js features for SSR and static generation. Ensuring the client could easily update content without developer intervention was also a key focus, requiring a user-friendly CMS setup."
   },
   {
     "name": "terminal-chat",
@@ -91,7 +92,8 @@
         "name": "Terminal Chat Profile",
         "src": "/projectImages/messanger/terminal-chat-profile.png"
       }
-    ]
+    ],
+    "challenges": "Building a real-time messaging app with a terminal-inspired UI required careful handling of WebSocket connections and state management to ensure messages and group updates were delivered instantly and reliably. Implementing profanity filters that worked efficiently on both the client and server was a challenge, as was designing a UI that felt authentic to a terminal while remaining user-friendly. Ensuring the app was responsive and worked well on both desktop and mobile devices required extensive testing and UI adjustments."
   },
   {
     "name": "finding-fiasco",
@@ -120,7 +122,8 @@
         "name": "Finding Fiasco Leaderboard",
         "src": "/projectImages/findingFiasco/finding-fiasco-leaderboard.png"
       }
-    ]
+    ],
+    "challenges": "The biggest challenge was creating a fair and engaging game experience, especially around verifying that players were not cheating by manipulating the game state in the browser. Implementing backend verification for scores and character finds required secure API design. Optimizing the large, detailed game image for fast loading on all devices was also a challenge, as was designing a UI that made it easy for players to find characters without frustration."
   },
   {
     "name": "life-log",
@@ -128,6 +131,7 @@
     "description": "My personal life planner that tracks everything in my life using text message commands to update notion databases. It includes a budget tracker, to-do list, and various life tracking features.",
     "source": "/projectImages/lifeLog/Screenshot_20250617-135240-left.png",
 
-    "inProgress": true
+    "inProgress": true,
+    "challenges": "The main challenge was integrating SMS commands with Notion's API to update databases in real time. Ensuring reliable message delivery and accurate parsing of commands required robust error handling and validation. Managing multiple types of data (budget, tasks, life events) in a single system while keeping the interface simple and usable was also a significant challenge."
   }
 ]

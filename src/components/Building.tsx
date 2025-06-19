@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 import projects from "./../data/projects.json";
 export default function Building() {
   return (
-    <div className="bg-foreground text-background w-full flex justify-center px-4">
+    <div className="bg-foreground text-background w-full flex justify-center py-10 px-4">
       <div className="py-4 md:py-16 flex flex-col gap-6 md:gap-12 w-full max-w-6xl">
         <div className="flex flex-col gap-3 md:gap-6">
           <h3 className="text-xl md:text-3xl font-bold col-span-1 md:col-span-2 ">
@@ -14,7 +14,7 @@ export default function Building() {
             finished projects and contracts.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 pt-6">
           {projects.map((proj: Project) => (
             <ProjectCard
               key={proj.name}

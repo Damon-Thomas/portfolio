@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="bg-foreground text-background w-full flex  justify-center relative px-4">
+    <div className="bg-foreground text-background w-full flex py-10 justify-center relative px-4">
       <div className="py-4 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-3 md:gap-y-6 w-full max-w-6xl">
         <h3 className="text-xl md:text-3xl font-bold col-span-1 md:col-span-2 ">
           About me

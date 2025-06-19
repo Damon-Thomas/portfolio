@@ -14,11 +14,11 @@ export default function OtherProjects({
     (proj: Project) => proj.name === project.name
   );
   return (
-    <div className="flex flex-col w-full p-4 justify-center mt-6 md:mt-20">
-      <h2 className="text-xl md:text-3xl w-full font-bold mb-2">
+    <div className="flex flex-col w-full gap-4 p-4 justify-center my-10 md:mt-20">
+      <h2 className="text-xl md:text-3xl w-full text-center  pt-8 font-bold mb-2">
         Other Projects
       </h2>
-      <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl">
+      <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl">
         {projects.map((proj: Project, idx: number) => {
           if (
             (idx === curIdx + 1 && idx != projects.length - 1) ||

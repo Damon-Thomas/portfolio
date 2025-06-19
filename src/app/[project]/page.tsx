@@ -1,5 +1,4 @@
 import Collab from "@/components/Collab";
-import IconRenderer from "@/components/IconRenderer";
 import Challenges from "@/components/project/Challenges";
 import Intent from "@/components/project/Intent";
 import LandingImage from "@/components/project/LandingImage";
@@ -8,7 +7,6 @@ import ScreenGrabs from "@/components/project/ScreenGrabs";
 import Summary from "@/components/project/Summary";
 import Technical from "@/components/project/Technical";
 import projects from "@/data/projects.json";
-import Image from "next/image";
 import React from "react";
 
 export default async function ProjectPage({
