@@ -18,7 +18,7 @@ export default async function ProjectPage({
   const projectData = projects.find((p) => p.name === project);
   return (
     <div className="flex justify-center bg-foreground text-background w-full min-h-screen">
-      <div className="flex flex-col items-start justify-start w-full max-w-6xl p-4 pt-16 md:pt-28">
+      <div className="flex flex-col items-start justify-start w-full text-base md:text-lg max-w-6xl p-4 pt-16 md:pt-28">
         <Summary projectData={projectData} />
         <LandingImage project={projectData} />
         <Intent project={projectData} />

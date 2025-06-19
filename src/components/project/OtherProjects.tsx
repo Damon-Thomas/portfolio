@@ -14,7 +14,7 @@ export default function OtherProjects({
     (proj: Project) => proj.name === project.name
   );
   return (
-    <div className="flex flex-col w-full gap-4 p-4 justify-center my-10 md:mt-20">
+    <div className="flex flex-col w-full gap-4 p-4 justify-center my-10 mt-6 md:mt-18">
       <h2 className="text-xl md:text-3xl w-full text-center  pt-8 font-bold mb-2">
         Other Projects
       </h2>

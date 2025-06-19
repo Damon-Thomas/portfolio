@@ -7,7 +7,7 @@ export default function Technical({
   project: Project | undefined;
 }) {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between w-full  mt-18">
+    <div className="flex flex-col-reverse md:flex-row justify-between w-full py-10 mt-6 md:mt-18">
       <IconRenderer
         technologies={project?.stack || []}
         className="flex gap-2 mb-4"

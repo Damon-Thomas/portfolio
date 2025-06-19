@@ -10,7 +10,7 @@ export default function Challenges({
   }
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-col w-full max-w-3xl mt-18 ">
+      <div className="flex flex-col w-full max-w-3xl mt-6 md:mt-18 py-10">
         <h2 className="text-xl text-center md:text-3xl w-full font-bold mb-2">
           Challenges Faced
         </h2>

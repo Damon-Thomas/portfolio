@@ -101,7 +101,7 @@ export default function Collab({
           : "bg-foreground text-background"
       } w-full flex justify-center ${pad ? "px-4" : ""} `}
     >
-      <div className="flex flex-col md:flex-row py-10 md:py-16 max-w-6xl  w-full gap-10">
+      <div className="flex flex-col md:flex-row py-10 md:py-16 max-w-6xl  w-full gap-8 md:gap-12">
         <div className="flex flex-col justify-start gap-2 h-full md:gap-6">
           <h3 className="text-xl md:text-3xl w-full font-bold">
             Want to Collaborate?
