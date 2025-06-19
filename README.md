@@ -2,7 +2,7 @@
 
 This site was inspired by or with guidance from:
 
-- [Julia Johnson](https://www.joshwcomeau.com/effective-portfolio/)
+- [Julia Johnson](https://www.joshwcomeau.com/images/effective-portfolio/julia-home.jpg)
 - [Josh Comeau](https://www.joshwcomeau.com)
 - [Thomas Bosc](https://thomasbosc.com/)
 
