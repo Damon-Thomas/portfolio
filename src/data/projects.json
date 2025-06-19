@@ -2,7 +2,7 @@
   {
     "name": "zuno",
     "project": "Zuno: A Social Media Site",
-    "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com inspired UI.",
+    "description": "A social media platform designed to connect people and promote discussion. Features include user profiles with OAuth, posts, infinite nested comments, and a sleek X.com-inspired UI.",
     "source": "/projectImages/zuno/Zuno-Dashboard.png",
     "inProgress": false,
     "expandedDescription": "Zuno is a social media platform that allows users to create profiles, post content, and engage in discussions through comments. It features OAuth for secure authentication, a user-friendly interface inspired by X.com, and supports infinite nested comments for deep conversations. The platform is designed to foster community interaction and provide a space for sharing ideas.",
@@ -11,8 +11,8 @@
     "github": "https://github.com/Damon-Thomas/Social-Media-Site",
     "stack": ["React", "Next.js", "Typescript", "Node.js", "Postgres", "OAuth"],
     "type": "Project",
-    "intent": "This project strips down the opionated approach of most social media websites and puts the power back in the hands of users. No algorithms or focus on going viral. Users see the the conversations of the people they want to listen to as they unfold. The focus is on live discussion and interaction, so likes or followers are used as a tool for communicating with others, not as a way to gain popularity. \n\n The design is heavily inspired by X.com and is not meant as a product but rather a showcase of my skills in building a social media platform with a deployed front-end, back-end, and database.",
-    "technical": "Social media platforms are complex systems that require careful consideration of user experience, security, and scalability. This tech stack proves a solid foundation that is modern and fast. The use of Next.js allows for server-side rendering, improving performance and SEO. The integration of OAuth provides a secure authentication method, while the use of Postgres ensures reliable data storage and retrieval. \n\n The infinite nested comments feature uses comment database models that follow a tree like structure. Each comment has a reference to it's parent comment, post, and next level of child comments, so a comment thread can be followed like a doubly linked list, seeing only the nodes in front of and behind the current comment. The comment structure allows for deep conversations without overwhelming the user interface.",
+    "intent": "This project strips down the opinionated approach of most social media websites and puts the power back in the hands of users. No algorithms or focus on going viral. Users see the conversations of the people they want to listen to as they unfold. The focus is on live discussion and interaction, so likes or followers are used as a tool for communicating with others, not as a way to gain popularity.\n\nThe design is heavily inspired by X.com and is not meant as a product but rather a showcase of my skills in building a social media platform with a deployed front-end, back-end, and database.",
+    "technical": "Social media platforms are complex systems that require careful consideration of user experience, security, and scalability. This tech stack provides a solid foundation that is modern and fast. The use of Next.js allows for server-side rendering, improving performance and SEO. The integration of OAuth provides a secure authentication method, while the use of Postgres ensures reliable data storage and retrieval.\n\nThe infinite nested comments feature uses comment database models that follow a tree-like structure. Each comment has a reference to its parent comment, post, and next level of child comments, so a comment thread can be followed like a doubly linked list, seeing only the nodes in front of and behind the current comment. The comment structure allows for deep conversations without overwhelming the user interface.",
     "screenshots": [
       {
         "name": "Zuno Dashboard",
@@ -27,12 +27,12 @@
         "src": "/projectImages/zuno/zuno.damonthomas.dev-post.png"
       }
     ],
-    "challenges": "There were several challenges in building Zuno, including implementing the infinite nested comments feature and caching and updating post and comment data for instant ui changes without refreshing the page. \n\n The infinite nested comments required careful database design to ensure that comments could be easily retrieved and displayed without overwhelming the user interface. The solution involved creating a comment model that references its parent comment, allowing for a tree-like structure that can be easily traversed similarly to a doubly linked list. Representing nested comments uses a main thread line and grid layout. The consistent left sizing of the grid layout allowed for an anchored absolute postioned cover over sections that had no more siblings.  \n\n Caching and updating post and comment data was also a challenge, as it required careful consideration of how to keep the UI responsive while ensuring that data was always up-to-date. The solution involved using stale-while-revaluate (SWR) caching to ensure that the UI remained responsive while still providing accurate data."
+    "challenges": "There were several challenges in building Zuno, including implementing the infinite nested comments feature and caching and updating post and comment data for instant UI changes without refreshing the page.\n\nThe infinite nested comments required careful database design to ensure that comments could be easily retrieved and displayed without overwhelming the user interface. The solution involved creating a comment model that references its parent comment, allowing for a tree-like structure that can be easily traversed similarly to a doubly linked list. Representing nested comments uses a main thread line and grid layout. The consistent left sizing of the grid layout allowed for an anchored absolute positioned cover over sections that had no more siblings.\n\nCaching and updating post and comment data was also a challenge, as it required careful consideration of how to keep the UI responsive while ensuring that data was always up-to-date. The solution involved using stale-while-revalidate (SWR) caching to ensure that the UI remained responsive while still providing accurate data."
   },
   {
     "name": "artist-portfolio",
     "project": "Artist Portfolio",
-    "description": "An updated portfolio website for an artist to feature their work. Built with a strapi CMS for managing content and a simple design based on their old website. Page speed is a full 6s faster than the previous site.",
+    "description": "An updated portfolio website for an artist to feature their work. Built with a Strapi CMS for managing content and a simple design based on their old website. Page speed is a full 6s faster than the previous site.",
     "source": "/projectImages/artistPortfolio/artwork.png",
     "inProgress": false,
     "expandedDescription": "This artist portfolio website is a rebuilt version of their previous site. It features a CMS built with Strapi for easy content management. This website gives the client more control and the new site boasts improved performance. Pages load 6 seconds faster than the old version, enhancing user experience and engagement.",
@@ -48,7 +48,7 @@
     ],
     "type": "Contract",
     "intent": "The client was looking for an update to their portfolio site that was slow and didn't allow them to make desired additions. The goal was to create a simple, fast, and easy to manage site that would allow them to showcase their work and make updates without needing a developer.",
-    "technical": "Next.js was chosen because Speed and SEO were very important to the client. The Next.js framework allowed for server-side rendering where applicable, but also came with many tools for optimizing images and other assets. Strapi was chosen as the CMS because it is well supported, easy to use, and allows for custom content types. The use of Postgres ensures reliable data storage and retrieval, and Cloudinary was used for cloud storage so that content persits between restarts and to leverage the cloudinary CDN to increase photo loading speeds. \n\n The client's portfolio page speed improved from 6.8 seconds to 0.5 seconds, and its SEO score improved from 83 to 100 using lighthouse, a significant improvement that enhances user experience and meets the client's needs. The new site is also more visually appealing and easier to navigate, making it a great showcase for the artist's work.",
+    "technical": "Next.js was chosen because speed and SEO were very important to the client. The Next.js framework allowed for server-side rendering where applicable, but also came with many tools for optimizing images and other assets. Strapi was chosen as the CMS because it is well supported, easy to use, and allows for custom content types. The use of Postgres ensures reliable data storage and retrieval, and Cloudinary was used for cloud storage so that content persists between restarts and to leverage the Cloudinary CDN to increase photo loading speeds.\n\nThe client's portfolio page speed improved from 6.8 seconds to 0.5 seconds, and its SEO score improved from 83 to 100 using Lighthouse, a significant improvement that enhances user experience and meets the client's needs. The new site is also more visually appealing and easier to navigate, making it a great showcase for the artist's work.",
     "screenshots": [
       {
         "name": "Portfolio Landing Page",
@@ -63,29 +63,29 @@
         "src": "/projectImages/artistPortfolio/artistPortfolioBooks.png"
       }
     ],
-    "challenges": "The main challenge was optimizing image loading and page speed to keep the website fast as the artist portfolio grows. Migrating content to Strapi and integrating Cloudinary for image hosting required careful planning to ensure all assets were transferred and loaded efficiently without losing data. Improving on page speeds over the former site wasn't difficult as it was clearly having issues, but achieving a 0.5 second page load time and 1 second LCP on pages with 60+ images involved performance testing, image optimization, planning, and using Next.js features for SSR and static generation. Ensuring the client could easily update content without developer intervention was also a key challenge. The approach for designing the API endpoints involved stepping in the clients shoes and thinking about how they would want to interact with the site. This led to a simple, intuitive API that allows the client to easily manage their content without needing to understand the underlying technology."
+    "challenges": "The main challenge was optimizing image loading and page speed to keep the website fast as the artist's portfolio grows. Migrating content to Strapi and integrating Cloudinary for image hosting required careful planning to ensure all assets were transferred and loaded efficiently without losing data. Improving on page speeds over the former site wasn't difficult as it was clearly having issues, but achieving a 0.5 second page load time and 1 second LCP on pages with 60+ images involved performance testing, image optimization, planning, and using Next.js features for SSR and static generation. Ensuring the client could easily update content without developer intervention was also a key challenge. The approach for designing the API endpoints involved stepping in the client's shoes and thinking about how they would want to interact with the site. This led to a simple, intuitive API that allows the client to easily manage their content without needing to understand the underlying technology."
   },
   {
     "name": "terminal-chat",
     "project": "Terminal Chat",
-    "description": "A messaging app built with React and Vite, feautring profanity filters and a terminal inspired UI. Users can send messages, create groups, and manage their contacts.",
+    "description": "A messaging app built with React and Vite, featuring profanity filters and a terminal-inspired UI. Users can send messages, create groups, and manage their contacts.",
     "source": "/projectImages/messanger/messaging-app-beta-six.vercel.app_messages.png",
     "inProgress": false,
-    "expandedDescription": "This is a very simple, terminal-inspired messaging app that allows users to send messages, create groups, and manage contacts. It features a clean UI with a focus on functionality, including profanity filters to ensure a safe messaging environment. The app is built with React and Vite for a modern development experience. User's can easily navigate through conversations and manage their contacts on both desktop and mobile screens.",
+    "expandedDescription": "This is a very simple, terminal-inspired messaging app that allows users to send messages, create groups, and manage contacts. It features a clean UI with a focus on functionality, including profanity filters to ensure a safe messaging environment. The app is built with React and Vite for a modern development experience. Users can easily navigate through conversations and manage their contacts on both desktop and mobile screens.",
     "landingPage": "/projectImages/messanger/terminal-chat-home.png",
     "website": "https://messaging-app-beta-six.vercel.app/",
     "github": "https://github.com/Damon-Thomas/Messaging-App",
     "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
     "type": "Project",
-    "intent": "Terminal Chat is meant to be a simple messaging app that allows its users to communicate in a terminal inspired environment. It is not meant to be a full-fledged messaging app, but rather a showcase of my skills in building a messaging app with a deployed front-end, back-end, and database.",
-    "technical": "This messaging app is built with React and Vite, providing a modern and fast development experience. The use of Node.js allows for a robust back-end, while Postgres ensures reliable data storage and retrieval. The profanity filters use a 'bad words' list to help maintain a safe messaging environment, enhancing user experience. \n\n The terminal-inspired UI is designed to be clean and functional, allowing users to easily navigate through conversations and manage their contacts. The app is responsive, ensuring a seamless experience on both desktop and mobile devices. The group chat feature allows users to create and manage groups, making it easy to communicate with multiple people at once about a focused topic. Supertest was used to test the API endpoints, ensuring that the app is reliable and performs well under various conditions.",
+    "intent": "Terminal Chat is meant to be a simple messaging app that allows its users to communicate in a terminal-inspired environment. It is not meant to be a full-fledged messaging app, but rather a showcase of my skills in building a messaging app with a deployed front-end, back-end, and database.",
+    "technical": "This messaging app is built with React and Vite, providing a modern and fast development experience. The use of Node.js allows for a robust back-end, while Postgres ensures reliable data storage and retrieval. The profanity filters use a 'bad words' list to help maintain a safe messaging environment, enhancing user experience.\n\nThe terminal-inspired UI is designed to be clean and functional, allowing users to easily navigate through conversations and manage their contacts. The app is responsive, ensuring a seamless experience on both desktop and mobile devices. The group chat feature allows users to create and manage groups, making it easy to communicate with multiple people at once about a focused topic. Supertest was used to test the API endpoints, ensuring that the app is reliable and performs well under various conditions.",
     "screenshots": [
       {
         "name": "Terminal Chat Dashboard",
         "src": "/projectImages/messanger/terminalchat-messaging.png"
       },
       {
-        "name": "Termial Chat Connections Mobile",
+        "name": "Terminal Chat Connections Mobile",
         "src": "/projectImages/messanger/terminal-chat-mobile.png"
       },
       {
@@ -93,22 +93,22 @@
         "src": "/projectImages/messanger/terminal-chat-profile.png"
       }
     ],
-    "challenges": "The database relationships were a challlenge, as users can have different types of contacts and ways of communicating with them. People can message friends and non-friends, so keeping things seperate was essential. Groups brought in another layer of complecity, as users can be in multiple groups and groups can have multiple users. Navigating these many-to-many relationships required an intermediary table to track the relationships between users and their groups. \n\n The first message on the app proved that it could benefit from a profanity filter. Implementing the profanity filters was fairly easy. It is just a package that compares words in messages to a list of restricted words. Their were other solutions that were considered, but the restricted list was chosen for its simplicity."
+    "challenges": "The database relationships were a challenge, as users can have different types of contacts and ways of communicating with them. People can message friends and non-friends, so keeping things separate was essential. Groups brought in another layer of complexity, as users can be in multiple groups and groups can have multiple users. Navigating these many-to-many relationships required an intermediary table to track the relationships between users and their groups.\n\nThe first message on the app proved that it could benefit from a profanity filter. Implementing the profanity filters was fairly easy. It is just a package that compares words in messages to a list of restricted words. There were other solutions that were considered, but the restricted list was chosen for its simplicity."
   },
   {
     "name": "finding-fiasco",
     "project": "Finding Fiasco",
-    "description": "A Where's Waldo style game where players find characters in a large, detailed image. The game features a timer, score tracking, and a variety of characters to find.",
+    "description": "A Where's Waldo-style game where players find characters in a large, detailed image. The game features a timer, score tracking, and a variety of characters to find.",
     "source": "/projectImages/findingFiasco/wheres-waldo-game.png",
     "inProgress": false,
-    "expandedDescription": "A Where's Waldo style game where players search for characters hidden in a large, detailed image. The game includes a timer to challenge players, score tracking to keep them engaged, and a variety of characters to find, making it a fun and interactive experience. The game is designed to be visually appealing and easy to play, with a focus on user engagement. ",
+    "expandedDescription": "A Where's Waldo-style game where players search for characters hidden in a large, detailed image. The game includes a timer to challenge players, score tracking to keep them engaged, and a variety of characters to find, making it a fun and interactive experience. The game is designed to be visually appealing and easy to play, with a focus on user engagement.",
     "landingPage": "/projectImages/findingFiasco/FindingFiascoHome.png",
     "website": "https://wheres-waldo-gilt.vercel.app/",
     "github": "https://github.com/Damon-Thomas/Wheres-Waldo",
     "stack": ["React", "Node.js", "Typescript", "Postgres", "Vite"],
     "type": "Project",
     "intent": "Finding Fiasco is a fun, interactive game that challenges players to find characters hidden in a large image. It is not meant to be a full-fledged game, but rather a showcase of my skills in building a game with a deployed front-end, back-end, and database.",
-    "technical": "The website is built with React and Vite, providing a modern and fast development experience. Postgres is used for data storage, allowing for easy score tracking and character management. The game features a timer to challenge players and score tracking to keep them engaged. \n\n The large, detailed image is resized for smaller screens, ensuring a seamless experience on both desktop and mobile devices. Games are verified in the backend to ensure that players are not cheating by using the browser's developer tools to manipulate the game state. The game is designed to be visually appealing and easy to play, with a focus on user engagement. ",
+    "technical": "The website is built with React and Vite, providing a modern and fast development experience. Postgres is used for data storage, allowing for easy score tracking and character management. The game features a timer to challenge players and score tracking to keep them engaged.\n\nThe large, detailed image is resized for smaller screens, ensuring a seamless experience on both desktop and mobile devices. Games are verified in the backend to ensure that players are not cheating by using the browser's developer tools to manipulate the game state. The game is designed to be visually appealing and easy to play, with a focus on user engagement.",
     "screenshots": [
       {
         "name": "Finding Fiasco Game",
@@ -123,14 +123,13 @@
         "src": "/projectImages/findingFiasco/finding-fiasco-leaderboard.png"
       }
     ],
-    "challenges": "The biggest challenge was creating a fair and engaging game experience, especially around verifying that players were not cheating by manipulating the game state in the browser. Early on in the implementation, a user was able to cheat the game, as API endpoints didn't verify that the user had an already existing game. User's were able to get negative scores this way. Implementing backend verification for scores and character finds required a more secure use of API endpoints. After moving all game logic to the backend, the negative scores stopped. \n\n Optimizing the large, detailed game image to work on mobile devices also preseted a challenge. The image was too large for mobile users to look through, so a resized image was needed. The resized image would change the image coordinates and break the game, so two sets of correct coordinates were create depending on the image being used by the user. The variable coordinate answers allowed the game to be played on both desktop and mobile devices without issues."
+    "challenges": "The biggest challenge was creating a fair and engaging game experience, especially around verifying that players were not cheating by manipulating the game state in the browser. Early on in the implementation, a user was able to cheat the game, as API endpoints didn't verify that the user had an already existing game. Users were able to get negative scores this way. Implementing backend verification for scores and character finds required a more secure use of API endpoints. After moving all game logic to the backend, the negative scores stopped.\n\nOptimizing the large, detailed game image to work on mobile devices also presented a challenge. The image was too large for mobile users to look through, so a resized image was needed. The resized image would change the image coordinates and break the game, so two sets of correct coordinates were created depending on the image being used by the user. The variable coordinate answers allowed the game to be played on both desktop and mobile devices without issues."
   },
   {
     "name": "life-log",
     "project": "Life Log",
-    "description": "My personal life planner that tracks everything in my life using text message commands to update notion databases. It includes a budget tracker, to-do list, and various life tracking features.",
+    "description": "My personal life planner that tracks everything in my life using text message commands to update Notion databases. It includes a budget tracker, to-do list, and various life tracking features.",
     "source": "/projectImages/lifeLog/Screenshot_20250617-135240-left.png",
-
     "inProgress": true
   }
 ]
