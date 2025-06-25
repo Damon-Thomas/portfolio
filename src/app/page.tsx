@@ -44,9 +44,9 @@ export default function Home() {
         smallScreen={smallScreen}
         atTop={atTop}
       />
-      <About />
-      <Skills />
       <Building />
+      <Skills />
+      <About />
       <Collab />
     </div>
   );

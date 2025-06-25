@@ -57,7 +57,9 @@ export default function ProjectCard({
       <div className="flex flex-col gap-2">
         <h3 className="text-2xl font-bold">{project}</h3>
         <p>{description}</p>
-        <div className="font-bold text-lg hover:underline">View Project</div>
+        <div className="font-extrabold text-lg md:text-xl text-[#835c00]  md:font-extrabold   hover:underline">
+          View Project
+        </div>
       </div>
     </Link>
   );

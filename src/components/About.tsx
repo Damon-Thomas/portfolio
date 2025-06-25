@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <div className="bg-foreground text-background w-full flex py-10 justify-center relative px-4">
@@ -23,6 +25,15 @@ export default function About() {
           let&apos;s me balance my curiosity and desire for deep challenging
           work with the collaborative joys of team work.{" "}
         </p>
+
+        <Link
+          href="/resume/DamonThomasResume1P.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-extrabold text-lg md:text-xl text-[#835c00]  md:font-extrabold   hover:underline"
+        >
+          View Resume
+        </Link>
       </div>
     </div>
   );
