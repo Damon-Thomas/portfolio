@@ -52,14 +52,14 @@ export default function Hero({
         width={350}
         height={525}
         priority
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] w-auto object-contain z-30 filter grayscale"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] max-h-[525px] w-auto aspect-[2/3] object-cover z-30 filter grayscale"
       />
       {/* Dark overlay over background image */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] w-[350px] bg-zinc-950/80 z-32 rounded-xl pointer-events-none" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] max-h-[525px] w-auto aspect-[2/3] bg-zinc-950/80 z-32 pointer-events-none" />
       {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] w-[350px] bg-[#ededed]/80 z-32 rounded-xl pointer-events-none" /> */}
 
       {/* Foreground image with hover effect only on image */}
-      <div className="relative z-40 group flex flex-col items-center w-[350px] h-[50vh]">
+      <div className="relative z-40 group flex flex-col items-center h-[50vh] max-h-[525px] aspect-[2/3]">
         <Image
           src="/pink-bg-removed.png"
           alt="Damon Foreground"
@@ -68,7 +68,7 @@ export default function Hero({
           priority
           onMouseEnter={() => setHeroActive(true)}
           onMouseLeave={() => setHeroActive(false)}
-          className={`h-full w-auto object-contain transition-opacity duration-700 z-50  ${
+          className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[50vh] max-h-[525px] w-auto aspect-[2/3] object-cover transition-opacity duration-700 z-50 ${
             heroActive ? "opacity-100" : "opacity-0"
           }`}
         />
