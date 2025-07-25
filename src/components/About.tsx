@@ -9,7 +9,7 @@ export default function About() {
         </h3>
         <p>
           I am a developer who loves to tinker and build. My curiosity has
-          driven me to divert course form a career in leadership and management
+          driven me to divert course from a career in leadership and management
           to one in software development.
         </p>
 
