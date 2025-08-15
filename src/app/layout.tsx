@@ -33,13 +33,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center`}
       >
-        <div className="main w-screen h-screen bg-background">{children}</div>
-
-        <script
-          data-collect-dnt="true"
-          async
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-        ></script>
+        <div className="main w-screen h-screen bg-background flex justify-center items-center">
+          {children}
+        </div>
       </body>
     </html>
   );

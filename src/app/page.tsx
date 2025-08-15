@@ -1,53 +1,31 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Skills from "../components/Skills";
-import Building from "../components/Building";
-import Collab from "@/components/Collab";
+import { useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import Page1 from "@/components/UI/Page1";
+import Page2 from "@/components/UI/Page2";
 
 export default function Home() {
-  const [heroActive, setHeroActive] = useState(false);
-  const [atTop, setAtTop] = useState(true);
-  const lastScrollY = useRef(0);
-  const [smallScreen, setSmallScreen] = useState(false);
+  const container = useRef(null);
+  const [currentPage, setCurrentPage] = useState<PageKey>("page1");
 
-  useEffect(() => {
-    const handleResize = () => setSmallScreen(window.innerWidth < 800);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  function changePage() {
+    setCurrentPage((prev) => (prev === "page1" ? "page2" : "page1"));
+  }
 
-  useEffect(() => {
-    const onScroll = () => {
-      setAtTop(window.scrollY === 0);
+  const pages = {
+    page1: <Page1 changePage={changePage} />,
+    page2: <Page2 changePage={changePage} />,
+  } as const;
 
-      if (window.scrollY > lastScrollY.current) {
-        setHeroActive(true);
-      } else {
-        setHeroActive(false);
-      }
-      lastScrollY.current = window.scrollY;
-    };
+  type PageKey = keyof typeof pages;
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  useGSAP();
 
   return (
-    <div className="flex flex-col items-center justify-start h-screen md:text-lg text-foreground bg-background">
-      <Hero
-        heroActive={heroActive}
-        setHeroActive={setHeroActive}
-        smallScreen={smallScreen}
-        atTop={atTop}
-      />
-      <Building />
-      <Skills />
-      <About />
-      <Collab />
+    <div className="flex h-full w-full text-black" ref={container}>
+      {pages[currentPage]}
     </div>
   );
 }
