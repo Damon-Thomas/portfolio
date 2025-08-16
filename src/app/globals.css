@@ -42,3 +42,7 @@ body {
 .animate-bounce-gentle {
   animation: bounce-gentle 1.2s ease-in-out infinite;
 }
+
+.inner-shadow {
+  box-shadow: inset 0 0 10vw 5vw black;
+}
