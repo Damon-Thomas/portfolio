@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
 :root {
+  --background: #ededed;
+  --foreground: #0a0a0a;
+  --primary: #9c5552;
+  --themeShadowColor: #0a0a0a;
+  --themeBorder: #0a0a0a;
+
+  /* Transition timing */
+  --text-transition-duration: 400ms;
+  --text-transition-timing: ease-out;
+  --visual-transition-duration: 400ms;
+  --visual-transition-timing: ease-in-out;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
   --primary: #9c5552;
-  /* --background: #ededed;
-  --foreground: #0a0a0a; */
+  --themeShadowColor: #ffb504;
+  --themeBorder: #0a0a0a;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -23,26 +37,96 @@
   }
 } */
 
+/* Global transition for all elements using CSS variables */
+* {
+  transition: color var(--text-transition-duration)
+      var(--text-transition-timing),
+    background-color var(--visual-transition-duration)
+      var(--visual-transition-timing),
+    border-color var(--visual-transition-duration)
+      var(--visual-transition-timing),
+    box-shadow var(--visual-transition-duration) var(--visual-transition-timing);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Elgoc Alt";
 }
 
-@keyframes bounce-gentle {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
+/* Theme switcher specific animations */
+.theme-switcher {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-switcher::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--primary), var(--themeShadowColor));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--visual-transition-duration)
+    var(--visual-transition-timing);
+  z-index: -1;
+}
+
+.theme-switcher:hover::before {
+  opacity: 0.1;
+}
+
+@keyframes theme-spin {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: translateX(-50%) translateY(-16px);
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.animate-bounce-gentle {
-  animation: bounce-gentle 1.2s ease-in-out infinite;
+.theme-spin {
+  animation: theme-spin 0.5s ease-in-out forwards;
 }
 
-.inner-shadow {
-  box-shadow: inset 0 0 10vw 5vw black;
+/* Custom transition utilities */
+.transition-fast {
+  transition: all var(--text-transition-duration) var(--text-transition-timing);
+}
+
+.transition-smooth {
+  transition: all var(--visual-transition-duration)
+    var(--visual-transition-timing);
+}
+
+.transition-text {
+  transition: color var(--text-transition-duration)
+    var(--text-transition-timing);
+}
+
+.transition-visual {
+  transition: background-color var(--visual-transition-duration)
+      var(--visual-transition-timing),
+    border-color var(--visual-transition-duration)
+      var(--visual-transition-timing),
+    box-shadow var(--visual-transition-duration) var(--visual-transition-timing);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
