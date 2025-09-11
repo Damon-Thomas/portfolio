@@ -27,7 +27,7 @@ export default function About() {
         </p>
 
         <Link
-          href="/resume/DamonThomasResume1P.pdf"
+          href="/resume/DamonThomas_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-extrabold text-lg md:text-xl text-[#835c00]  md:font-extrabold   hover:underline"

@@ -90,7 +90,7 @@ export default function Hero({
             Thomas
           </h1>
           <h2 className="whitespace-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide  drop-shadow-lg">
-            Full Stack{" "}
+            Software{" "}
             {!smallScreen && (
               <span
                 className={`${
@@ -98,7 +98,7 @@ export default function Hero({
                 } h-2 inline-block transition-all duration-700`}
               ></span>
             )}
-            Developer
+            Engineer
           </h2>
         </div>
       </div>
