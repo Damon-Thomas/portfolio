@@ -1,0 +1,135 @@
+/* Camera Shutter Animations */
+
+@keyframes shutterTopClose {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes shutterBottomClose {
+  0% { transform: translateY(100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes shutterLeftClose {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes shutterRightClose {
+  0% { transform: translateX(100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes irisShutter {
+  0% { 
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% { 
+    width: 150%;
+    height: 150%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% { 
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes wipeShutter {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.shutter-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shutter-overlay {
+  position: absolute;
+  background-color: #000;
+  z-index: 10;
+}
+
+.shutter-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.shutter-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.shutter-left {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.shutter-right {
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.shutter-iris {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+}
+
+.shutter-wipe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation classes */
+.shutter-horizontal-active .shutter-top {
+  animation: shutterTopClose var(--shutter-duration, 400ms) ease-in-out;
+}
+
+.shutter-horizontal-active .shutter-bottom {
+  animation: shutterBottomClose var(--shutter-duration, 400ms) ease-in-out;
+}
+
+.shutter-vertical-active .shutter-left {
+  animation: shutterLeftClose var(--shutter-duration, 400ms) ease-in-out;
+}
+
+.shutter-vertical-active .shutter-right {
+  animation: shutterRightClose var(--shutter-duration, 400ms) ease-in-out;
+}
+
+.shutter-iris-active .shutter-iris {
+  animation: irisShutter var(--shutter-duration, 400ms) ease-in-out;
+}
+
+.shutter-wipe-active .shutter-wipe {
+  animation: wipeShutter var(--shutter-duration, 400ms) ease-in-out;
+}

@@ -43,7 +43,7 @@ export default function Header() {
           setSidebarOpen={setSidebarOpen}
         />
         <div
-          className={`flex flex-col bg-background justify-between pb-10 pt-5 h-screen w-screen absolute top-0 left-0 p-2 `}
+          className={`flex z-40 flex-col bg-background justify-between pb-10 pt-5 h-screen w-screen absolute top-0 left-0 p-2 `}
           style={{
             transform: sidebarOpen
               ? "translateX(0)"
@@ -80,7 +80,7 @@ export default function Header() {
   // Desktop Header
   return (
     <div
-      className="flex justify-between items-center rounded-2xl h-fit px-4 mx-2 sm:mx-4 md:mx-6 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
+      className="flex z-40 justify-between items-center rounded-2xl h-fit px-4 mx-2 sm:mx-4 md:mx-6 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
         "
     >
       <div className="grid grid-cols-5 gap-4">

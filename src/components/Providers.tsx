@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
+import { ThemeContextProvider } from "@/contexts/ThemeContext";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +11,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem={false}
       disableTransitionOnChange={false}
     >
-      {children}
+      <ThemeContextProvider>
+        {children}
+      </ThemeContextProvider>
     </ThemeProvider>
   );
 }
