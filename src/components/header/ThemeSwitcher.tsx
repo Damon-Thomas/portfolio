@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+import Sun from "@/components/icons/Sun";
+import Moon from "@/components/icons/Moon";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
@@ -52,13 +53,11 @@ export default function ThemeSwitcher({
         isSpinning ? "theme-spin" : ""
       }`}
     >
-      <Image
-        src={theme === "dark" ? "/sun.svg" : "/moon.svg"}
-        alt={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-        width={24}
-        height={24}
-        className="w-6 h-6"
-      />
+      {theme === "dark" ? (
+        <Sun className="w-6 h-6" />
+      ) : (
+        <Moon className="w-6 h-6" />
+      )}
     </button>
     // </header>
   );

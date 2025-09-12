@@ -8,9 +8,9 @@
   --themeBorder: #0a0a0a;
 
   /* Transition timing */
-  --text-transition-duration: 400ms;
+  --text-transition-duration: 50ms;
   --text-transition-timing: ease-out;
-  --visual-transition-duration: 400ms;
+  --visual-transition-duration: 50ms;
   --visual-transition-timing: ease-in-out;
 }
 
@@ -18,7 +18,7 @@
   --background: #0a0a0a;
   --foreground: #ededed;
   --primary: #9c5552;
-  --themeShadowColor: #ffb504;
+  --themeShadowColor: #ededed;
   --themeBorder: #0a0a0a;
 }
 
@@ -45,13 +45,97 @@
       var(--visual-transition-timing),
     border-color var(--visual-transition-duration)
       var(--visual-transition-timing),
-    box-shadow var(--visual-transition-duration) var(--visual-transition-timing);
+    box-shadow var(--visual-transition-duration) var(--visual-transition-timing),
+    fill var(--visual-transition-duration) var(--visual-transition-timing);
 }
 
 body {
+  position: relative;
+
   background: var(--background);
   color: var(--foreground);
   font-family: "Elgoc Alt";
+}
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Main styles */
+body {
+  /* margin-top: 13.5rem; */
+
+  color: var(--foreground);
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC")
+    repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse 3s infinite; /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 3s infinite; /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 3s infinite; /* Opera 12+ */
+  animation: bg-scrolling-reverse 3s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+body::before {
+  content: "";
+
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
 }
 
 /* Theme switcher specific animations */
@@ -129,4 +213,41 @@ body {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-aware SVG icons */
+.theme-icon {
+  filter: brightness(0) saturate(100%);
+  transition: filter var(--visual-transition-duration)
+    var(--visual-transition-timing);
+}
+
+:root .theme-icon {
+  filter: brightness(0) saturate(100%) invert(6%) sepia(7%) saturate(1204%)
+    hue-rotate(314deg) brightness(98%) contrast(96%);
+}
+
+.dark .theme-icon {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(191%)
+    hue-rotate(314deg) brightness(105%) contrast(88%);
+}
+
+body {
+  position: relative;
+}
+
+.dark body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0; /* Ensure overlay is above the grid */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
