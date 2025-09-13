@@ -11,6 +11,14 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const smallScreen = useSmallScreen();
 
+  const headerLinks = [
+    { name: "Home" },
+    { name: "Services" },
+    { name: "Open Source" },
+    { name: "Experience" },
+    { name: "Skills" },
+  ];
+
   // Ensure component is mounted before accessing window object
   useEffect(() => {
     setMounted(true);
@@ -39,11 +47,16 @@ export default function Header() {
         >
           <div className="relative w-full h-10"></div>
           <div className="grid grid-rows-5 w-full flex-1 mb-10 border-t-1 border-[var(--foreground)] ">
-            <HeaderButton small onClick={() => {}}>
-              About{" "}
+            {headerLinks.map((link) => (
+              <HeaderButton key={link.name} small onClick={() => {}}>
+                {link.name}{" "}
+              </HeaderButton>
+            ))}
+            {/* <HeaderButton small onClick={() => {}}>
+              Home{" "}
             </HeaderButton>
             <HeaderButton small onClick={() => {}}>
-              Projects{" "}
+              Services{" "}
             </HeaderButton>
             <HeaderButton small onClick={() => {}}>
               Open Source{" "}
@@ -53,7 +66,7 @@ export default function Header() {
             </HeaderButton>
             <HeaderButton small onClick={() => {}}>
               Skills{" "}
-            </HeaderButton>
+            </HeaderButton> */}
           </div>
           <div className="w-full flex justify-center">
             <ThemeSwitcher inLine={true} />
@@ -70,11 +83,16 @@ export default function Header() {
         "
     >
       <div className="grid grid-cols-5 gap-4">
-        <HeaderButton onClick={() => {}}>About </HeaderButton>
+        {headerLinks.map((link) => (
+          <HeaderButton key={link.name} onClick={() => {}}>
+            {link.name}{" "}
+          </HeaderButton>
+        ))}
+        {/* <HeaderButton onClick={() => {}}>About </HeaderButton>
         <HeaderButton onClick={() => {}}>Projects </HeaderButton>
         <HeaderButton onClick={() => {}}>Open Source </HeaderButton>
         <HeaderButton onClick={() => {}}>Experience </HeaderButton>
-        <HeaderButton onClick={() => {}}>Skills </HeaderButton>
+        <HeaderButton onClick={() => {}}>Skills </HeaderButton> */}
       </div>
       <ThemeSwitcher inLine />
     </div>

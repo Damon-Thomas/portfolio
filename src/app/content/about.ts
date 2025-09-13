@@ -20,3 +20,31 @@ export const skills = [
       "I love building things with code, and being able to help other people with their project and be a part of what their building is an amazing experience.",
   },
 ];
+
+export const services = [
+  {
+    title: "Website & Web App Development",
+    description:
+      "I design and build modern websites and web applications that look great on any device. Whether it's a simple landing page or a full social media platform, I create fast, user-friendly, and reliable products.",
+  },
+  {
+    title: "Frontend Design & User Experience",
+    description:
+      "I focus on clean, responsive layouts that are easy to navigate. The goal is always to make the site feel intuitive and professional so visitors can quickly find what they need.",
+  },
+  {
+    title: "Backend Systems & Databases",
+    description:
+      "I set up the behind-the-scenes systems that power your website, from secure login features to databases that keep everything running smoothly.",
+  },
+  {
+    title: "Performance & Deployment",
+    description:
+      "I handle the technical details of putting your site online and keeping it live. This includes hosting, speed optimization, and making sure everything works as your business grows.",
+  },
+  {
+    title: "Consulting & Problem Solving",
+    description:
+      "Not sure what you need yet? I can help clarify requirements, suggest practical solutions, or improve an existing website so it works better for you and your users.",
+  },
+];
