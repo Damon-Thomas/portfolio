@@ -66,7 +66,7 @@ export default function Header() {
   // Desktop Header
   return (
     <div
-      className="flex z-40 justify-between items-center rounded-2xl h-fit px-4 mx-2 sm:mx-4 md:mx-6 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
+      className="flex z-40 fixed top-4 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6 justify-between items-center rounded-2xl h-fit px-4 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
         "
     >
       <div className="grid grid-cols-5 gap-4">

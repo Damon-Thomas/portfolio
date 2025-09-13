@@ -8,7 +8,7 @@ export default function Controller() {
     <PageWrapper>
       <Header />
       <Home />
-      {/* <About /> */}
+      <About />
     </PageWrapper>
   );
 }
