@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "next-themes";
 import { ThemeContextProvider } from "@/contexts/ThemeContext";
+import { ViewportContextProvider } from "@/contexts/ViewportContext";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -12,7 +13,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange={false}
     >
       <ThemeContextProvider>
-        {children}
+        <ViewportContextProvider>
+          {children}
+        </ViewportContextProvider>
       </ThemeContextProvider>
     </ThemeProvider>
   );

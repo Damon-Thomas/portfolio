@@ -1,12 +1,14 @@
-import About from "@/components/About";
+import About from "@/components/about/About";
 import Header from "@/components/header/Header";
+import Home from "@/components/home/Home";
 import PageWrapper from "@/components/PageWrapper";
 
-export default function Home() {
+export default function Controller() {
   return (
     <PageWrapper>
       <Header />
-      <About />
+      <Home />
+      {/* <About /> */}
     </PageWrapper>
   );
 }

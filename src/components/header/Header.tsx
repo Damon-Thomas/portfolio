@@ -4,30 +4,16 @@ import { useEffect, useState } from "react";
 import HeaderButton from "./HeaderButton";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SidebarToggle from "./SidebarToggle";
+import { useSmallScreen } from "@/contexts/ViewportContext";
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [smallScreen, setSmallScreen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const smallScreen = useSmallScreen();
 
   // Ensure component is mounted before accessing window object
   useEffect(() => {
     setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSmallScreen(window.innerWidth < 850); // Example breakpoint for small screens
-      if (window.innerWidth >= 850) {
-        setSidebarOpen(false); // Close sidebar on larger screens
-        setSidebarOpen(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!mounted) {
