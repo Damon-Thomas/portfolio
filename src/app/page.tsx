@@ -1,6 +1,7 @@
 import Header from "@/components/header/Header";
 import Home from "@/components/home/Home";
 import PageWrapper from "@/components/PageWrapper";
+import ProjectHandler from "@/components/projects/ProjectHandler";
 import Service from "@/components/services/Service";
 
 export default function Controller() {
@@ -9,6 +10,7 @@ export default function Controller() {
       <Header />
       <Home />
       <Service />
+      <ProjectHandler />
     </PageWrapper>
   );
 }

@@ -4,7 +4,7 @@ import Photo from "./Photo";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mt-14 mb-8 md:mt-20 md:mb-20 gap-6 md:gap-12 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-18 mb-8 md:mt-28 md:mb-20 gap-6 md:gap-12 items-center">
       <div className="flex justify-center">
         <div className="flex flex-col gap-4 w-fit">
           <p className="text-2xl! md:text-3xl! lg:text-5xl font-bold text-left">
