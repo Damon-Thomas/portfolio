@@ -17,9 +17,14 @@ export default function Home() {
             I'm a Software Engineer specializing <br />
             in full-stack web applications.
           </p>
-          <div className="flex gap-2 sm:gap-4 md:gap-6 mt-4">
-            <GitHub />
-            <LinkedIn />
+          <div className="flex items-center justify-between mt-4">
+            <div className="flex gap-2 sm:gap-4 md:gap-6">
+              <GitHub />
+              <LinkedIn />
+            </div>
+            <button className="bg-foreground p-4 !text-[var(--backgroundText)] font-black rounded-lg hover:cursor-pointer hover:shadow-[var(--themeShadowColor)_0px_0px_10px_3px] transition-visual">
+              Contact Me
+            </button>
           </div>
         </div>
       </div>

@@ -14,9 +14,10 @@ export default function Header() {
   const headerLinks = [
     { name: "Home" },
     { name: "Services" },
-    { name: "Open Source" },
-    { name: "Experience" },
+    { name: "My Work" },
     { name: "Skills" },
+    { name: "Background" },
+    { name: "Contact" },
   ];
 
   // Ensure component is mounted before accessing window object
@@ -46,27 +47,14 @@ export default function Header() {
           }}
         >
           <div className="relative w-full h-10"></div>
-          <div className="grid grid-rows-5 w-full flex-1 mb-10 border-t-1 border-[var(--foreground)] ">
+          <div
+            className={`grid w-full flex-1 mb-10 border-t-1 border-[var(--foreground)] grid-rows-[repeat(${headerLinks.length},minmax(0,1fr))]`}
+          >
             {headerLinks.map((link) => (
               <HeaderButton key={link.name} small onClick={() => {}}>
                 {link.name}{" "}
               </HeaderButton>
             ))}
-            {/* <HeaderButton small onClick={() => {}}>
-              Home{" "}
-            </HeaderButton>
-            <HeaderButton small onClick={() => {}}>
-              Services{" "}
-            </HeaderButton>
-            <HeaderButton small onClick={() => {}}>
-              Open Source{" "}
-            </HeaderButton>
-            <HeaderButton small onClick={() => {}}>
-              Experience{" "}
-            </HeaderButton>
-            <HeaderButton small onClick={() => {}}>
-              Skills{" "}
-            </HeaderButton> */}
           </div>
           <div className="w-full flex justify-center">
             <ThemeSwitcher inLine={true} />
@@ -82,17 +70,12 @@ export default function Header() {
       className="flex z-40 fixed top-4 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6 justify-between items-center rounded-2xl h-fit px-4 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
         "
     >
-      <div className="grid grid-cols-5 gap-4">
+      <div className={`grid gap-4 grid-cols-[repeat(6,minmax(0,1fr))]`}>
         {headerLinks.map((link) => (
           <HeaderButton key={link.name} onClick={() => {}}>
             {link.name}{" "}
           </HeaderButton>
         ))}
-        {/* <HeaderButton onClick={() => {}}>About </HeaderButton>
-        <HeaderButton onClick={() => {}}>Projects </HeaderButton>
-        <HeaderButton onClick={() => {}}>Open Source </HeaderButton>
-        <HeaderButton onClick={() => {}}>Experience </HeaderButton>
-        <HeaderButton onClick={() => {}}>Skills </HeaderButton> */}
       </div>
       <ThemeSwitcher inLine />
     </div>

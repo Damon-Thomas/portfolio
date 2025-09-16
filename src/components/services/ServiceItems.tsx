@@ -9,6 +9,11 @@ export default function ServiceItems() {
           <p className=" "> {service.description}</p>
         </div>
       ))}
+      <div className="flex justify-center items-center">
+        <button className="bg-foreground p-4 !text-[var(--backgroundText)] font-black rounded-lg hover:cursor-pointer hover:shadow-[var(--themeShadowColor)_0px_0px_10px_3px] transition-visual">
+          Get A Quote Now!
+        </button>
+      </div>
     </div>
   );
 }

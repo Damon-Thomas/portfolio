@@ -2,6 +2,7 @@
 
 :root {
   --background: #ededed;
+  --backgroundText: #ffffff;
   --foreground: #0a0a0a;
   --primary: #9c5552;
   --themeShadowColor: #0a0a0a;
@@ -16,6 +17,8 @@
 
 .dark {
   --background: #0a0a0a;
+  --backgroundText: #0a0a0a;
+
   --foreground: #ffffff;
   --primary: #9c5552;
   --themeShadowColor: #ededed;
