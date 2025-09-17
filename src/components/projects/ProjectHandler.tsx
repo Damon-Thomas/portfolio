@@ -92,14 +92,21 @@ export default function ProjectHandler() {
       {projects.map((project) => (
         <div
           key={project.title}
-          className={
+          className={`${
             project.featured
               ? "border-4 border-[var(--accent)] rounded-lg p-4"
               : ""
-          }
+          } `}
         >
-          <h2 className="text-3xl font-bold mb-2">{project.title}</h2>
-          <p className="mb-4">{project.description}</p>
+          <h2 className="text-3xl font-bold mb-2 flex justify-start">
+            {project.title}
+          </h2>
+          <p className="mb-4 flex justify-start">{project.description}</p>
+          <img
+            src={project.image1}
+            alt={`${project.title} screenshot 1`}
+            className="rounded-lg"
+          />
           <h3 className="text-2xl font-semibold mt-2 mb-1">Features:</h3>
           <ul className="list-disc list-inside mb-4">
             {project.features.map((feature, index) => (
@@ -113,11 +120,6 @@ export default function ProjectHandler() {
             ))}
           </ul>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-            <img
-              src={project.image1}
-              alt={`${project.title} screenshot 1`}
-              className="rounded-lg"
-            />
             {project.image2 && (
               <img
                 src={project.image2}
