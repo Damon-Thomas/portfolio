@@ -92,10 +92,11 @@ export default function ProjectHandler() {
     },
   ];
   return (
-    <div className="flex flex-col gap-8 my-8">
+    <div className="flex flex-col gap-72 my-8">
       {projects.map((project) =>
         project.featured ? (
           <FeaturedProject
+            key={project.title}
             title={project.title}
             description={project.description}
             features={project.features}
@@ -109,6 +110,7 @@ export default function ProjectHandler() {
           />
         ) : (
           <Project
+            key={project.title}
             title={project.title}
             description={project.description}
             features={project.features}
