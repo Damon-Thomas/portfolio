@@ -1,3 +1,6 @@
+import FeaturedProject from "./FeaturedProject";
+import Project from "./Project";
+
 export default function ProjectHandler() {
   const projects = [
     {
@@ -12,6 +15,7 @@ export default function ProjectHandler() {
       ],
       techStack: ["React", "Node.js", "Express", "PostgreSQL"],
       githubUrl: "https://github.com/Damon-Thomas/Zuno",
+      video: "/projectImages/zuno/Zuno-Demo.mp4",
       image1: "/projects/zuno/Zuno Homepage.png",
       image2: "/projects/zuno/zuno-dashboard-full.png",
       mobile: "/projects/zuno/zuno-dashboard(iPhone SE).png",
@@ -89,76 +93,34 @@ export default function ProjectHandler() {
   ];
   return (
     <div className="flex flex-col gap-8 my-8">
-      {projects.map((project) => (
-        <div
-          key={project.title}
-          className={`${
-            project.featured
-              ? "border-4 border-[var(--accent)] rounded-lg p-4"
-              : ""
-          } `}
-        >
-          <h2 className="text-3xl font-bold mb-2 flex justify-start">
-            {project.title}
-          </h2>
-          <p className="mb-4 flex justify-start">{project.description}</p>
-          <img
-            src={project.image1}
-            alt={`${project.title} screenshot 1`}
-            className="rounded-lg"
+      {projects.map((project) =>
+        project.featured ? (
+          <FeaturedProject
+            title={project.title}
+            description={project.description}
+            features={project.features}
+            techStack={project.techStack}
+            video={project.video ?? ""}
+            image1={project.image1}
+            image2={project.image2}
+            image3={project.mobile}
+            githubUrl={project.githubUrl}
+            hostedLink={project.hostedLink}
           />
-          <h3 className="text-2xl font-semibold mt-2 mb-1">Features:</h3>
-          <ul className="list-disc list-inside mb-4">
-            {project.features.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
-          <h3 className="text-2xl font-semibold mt-2 mb-1">Tech Stack:</h3>
-          <ul className="list-disc list-inside mb-4">
-            {project.techStack.map((tech, index) => (
-              <li key={index}>{tech}</li>
-            ))}
-          </ul>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-            {project.image2 && (
-              <img
-                src={project.image2}
-                alt={`${project.title} screenshot 2`}
-                className="rounded-lg"
-              />
-            )}
-            {project.mobile && (
-              <img
-                src={project.mobile}
-                alt={`${project.title} screenshot 3`}
-                className="rounded-lg"
-              />
-            )}
-          </div>
-          <div className="flex gap-4">
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-[var(--accent)] text-white rounded hover:bg-[var(--accentHover)] transition"
-              >
-                View on GitHub
-              </a>
-            )}
-            {project.hostedLink && (
-              <a
-                href={project.hostedLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-[var(--accent)] text-white rounded hover:bg-[var(--accentHover)] transition"
-              >
-                Visit Site
-              </a>
-            )}
-          </div>
-        </div>
-      ))}
+        ) : (
+          <Project
+            title={project.title}
+            description={project.description}
+            features={project.features}
+            techStack={project.techStack}
+            image1={project.image1}
+            image2={project.image2}
+            image3={project.mobile}
+            githubUrl={project.githubUrl}
+            hostedLink={project.hostedLink}
+          />
+        )
+      )}
     </div>
   );
 }
