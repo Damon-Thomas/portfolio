@@ -1,4 +1,9 @@
+"use client";
+
+import { useAppTheme } from "@/contexts/ThemeContext";
 import { getTechStackIcon } from "@/utils/techStack";
+import { useContext } from "react";
+import InfiniteLooper from "../utils/InfiniteLooper";
 
 export default function FeaturedProject({
   title,
@@ -23,6 +28,7 @@ export default function FeaturedProject({
   githubUrl: string;
   hostedLink: string;
 }) {
+  const { theme } = useAppTheme();
   return (
     //Featured Project Section
 
@@ -83,18 +89,25 @@ export default function FeaturedProject({
           </div>
         </div>
         {/* Tech Stack */}
-        <div className=" p-2 sm:p-4">
+        <div className="flex flex-col p-2 sm:pr-4 gap-2 sm:gap-4 md:gap-6">
           <h3 className="text-left font-extrabold text-lg sm:text-2xl md:text-4xl">
             Tech and Tools
           </h3>
-          <div className="h-14 relative">
-            <ul className="flex absolute w-screen py-2">
-              {techStack.map((tech) => (
-                <li className="text-left text-lg">
-                  <img src={getTechStackIcon(tech)} className="w-10 h-10" />{" "}
-                </li>
-              ))}
-            </ul>
+          <div className="h-14 relative  ">
+            <div className="flex absolute left-[calc(-75vw+50%)] w-[150vw] p-2 bg-[var(--banner)] -z-20">
+              <InfiniteLooper
+                speed={10}
+                direction="right"
+                children={techStack.map((tech) => (
+                  <div className="text-left text-lg">
+                    <img
+                      src={getTechStackIcon(tech)}
+                      className={`w-10 h-10 filter grayscale brightness-200 `}
+                    />{" "}
+                  </div>
+                ))}
+              />
+            </div>
           </div>
         </div>
         {/* Image 2 */}
