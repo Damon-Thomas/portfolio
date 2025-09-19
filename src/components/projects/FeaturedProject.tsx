@@ -93,9 +93,9 @@ export default function FeaturedProject({
             Tech and Tools
           </h3>
           <div className="h-14 relative  ">
-            <div className="flex absolute left-[calc(-75vw+50%)] w-[150vw] p-2 bg-[var(--banner)] -z-20">
+            <div className="flex absolute left-[calc(-75vw+50%)] w-[150vw] p-2 sm:p-4 bg-[var(--banner)] -z-1">
               <InfiniteLooper
-                speed={10}
+                speed={20}
                 direction="right"
                 children={techStack.map((tech) => (
                   <div className="text-left text-lg">

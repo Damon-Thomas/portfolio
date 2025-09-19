@@ -10,7 +10,7 @@ export default function InfiniteLooper({
   direction: "right" | "left";
   children: React.ReactNode;
 }) {
-  const [looperInstances, setLooperInstances] = useState(2); // Start with 2 for seamless loop
+  const [looperInstances, setLooperInstances] = useState(3);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
@@ -20,21 +20,12 @@ export default function InfiniteLooper({
     const { width } = innerRef.current.getBoundingClientRect();
     const { width: parentWidth } = outerRef.current.getBoundingClientRect();
 
-    console.log(
-      "Inner",
-      innerRef.current.getBoundingClientRect(),
-      "Outer,",
-      outerRef.current.getBoundingClientRect()
-    );
+    // Calculate how many instances we need to fill the screen plus extras
+    const singleInstanceWidth = width / looperInstances;
+    const neededInstances = Math.ceil(parentWidth / singleInstanceWidth) + 2;
 
-    const instanceWidth = width / innerRef.current.children.length;
-
-    // Ensure we have enough instances to fill the screen plus one extra for seamless loop
-    const minInstances = Math.ceil(parentWidth / (width / looperInstances)) + 1;
-
-    if (looperInstances < minInstances) {
-      setLooperInstances(Math.max(2, minInstances)); // Always at least 2 instances
-      console.log("Setting instances to:", Math.max(2, minInstances));
+    if (looperInstances < neededInstances) {
+      setLooperInstances(Math.max(3, neededInstances));
     }
   }
 
@@ -44,27 +35,25 @@ export default function InfiniteLooper({
 
   useEffect(() => {
     window.addEventListener("resize", setupInstances);
-
-    return () => {
-      window.removeEventListener("resize", setupInstances);
-    };
+    return () => window.removeEventListener("resize", setupInstances);
   }, []);
 
   return (
     <div className="looper w-full" ref={outerRef}>
       <div
-        className="looper__innerList w-fit flex gap-8"
+        className="looper__innerList flex gap-8"
         ref={innerRef}
         data-animate="true"
+        style={{
+          animationDuration: `${speed}s`,
+          animationDirection: direction === "right" ? "reverse" : "normal",
+          "--translate-percentage": `-${100 / looperInstances}%`,
+        } as React.CSSProperties & { "--translate-percentage": string }}
       >
         {[...Array(looperInstances)].map((_, ind) => (
           <div
             key={ind}
-            className="looper__listInstance w-full flex gap-8"
-            style={{
-              animationDuration: `${speed}s`,
-              animationDirection: direction === "right" ? "reverse" : "normal",
-            }}
+            className="looper__listInstance flex gap-8"
           >
             {children}
           </div>

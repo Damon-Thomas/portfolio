@@ -23,7 +23,6 @@ export default function ProjectHandler() {
         "Tailwind CSS",
         "Git",
         "GitHub",
-        "Express",
         "PostgreSQL",
         "ESLint",
         "VS Code",
