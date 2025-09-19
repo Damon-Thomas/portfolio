@@ -2,7 +2,6 @@
 
 import { useAppTheme } from "@/contexts/ThemeContext";
 import { getTechStackIcon } from "@/utils/techStack";
-import { useContext } from "react";
 import InfiniteLooper from "../utils/InfiniteLooper";
 
 export default function FeaturedProject({
@@ -102,7 +101,7 @@ export default function FeaturedProject({
                   <div className="text-left text-lg">
                     <img
                       src={getTechStackIcon(tech)}
-                      className={`w-10 h-10 filter grayscale brightness-200 `}
+                      className={`w-10 h-10 filter  `}
                     />{" "}
                   </div>
                 ))}
