@@ -2,7 +2,9 @@ export default function GitHub({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 128 128"
-      className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 ${className || ''}`}
+      className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10  ${
+        className || ""
+      }`}
       style={{ fill: "var(--foreground)" }}
     >
       <g>

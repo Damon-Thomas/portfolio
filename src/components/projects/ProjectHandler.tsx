@@ -13,6 +13,7 @@ export default function ProjectHandler() {
         "Follow other users",
         "Meet new people and make friends",
       ],
+      mainTech: ["TypeScript", "Next.js"],
       techStack: [
         "React",
         "TypeScript",
@@ -40,22 +41,38 @@ export default function ProjectHandler() {
       image4: "/projects/zuno/zuno-connections.png",
       image5: "/projects/zuno/zuno.damonthomas.dev-post.png",
       hostedLink: "https://zuno.damonthomas.dev/",
+      brandImage: "/projects/zuno/zuno192x192.png",
     },
     {
       featured: false,
-      title: "NHL Stat Card Creator",
+      title: "NHL Stat Cards",
       description: "A web app for creating custom NHL player stat cards.",
       features: [
         "Search for NHL players",
         "Generate and download stat cards",
         "Responsive design for all devices",
       ],
-      techStack: ["React", "TypeScript", "CSS"],
+      mainTech: ["TypeScript", "React"],
+      techStack: [
+        "React",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Git",
+        "GitHub",
+        "ESLint",
+        "VS Code",
+        "Vercel",
+        "pnpm",
+      ],
       githubUrl: "https://github.com/Damon-Thomas/NHL-Stat-Card-Builder",
+      video: "/projects/nhl-stat-card/NHLStatCardDemo.mp4",
       image1: "/projects/nhl-stat-card/Sidney_Crosby_PIT_Card.png",
       image2: "/projects/nhl-stat-card/HelpPage.png",
       mobile: "/projects/nhl-stat-card/MobileCard.png",
       hostedLink: "https://nhl-stat-cards.vercel.app/",
+      brandImage: "/projects/nhl-stat-card/NHLStatCard.png",
     },
     {
       featured: false,
@@ -101,7 +118,7 @@ export default function ProjectHandler() {
         "Global leaderboard to track high scores",
         "Responsive design for all devices",
       ],
-      techStack: ["React", "TypeScript", "CSS"],
+      techStack: ["React", "TypeScript", "CSS3"],
       githubUrl: "https://github.com/Damon-Thomas/Finding-Fiasco",
       image1: "/projects/finding-fiasco/finding-fiasco-game.png",
       image2: "/projects/finding-fiasco/FindingFiascoHome.png",
@@ -111,36 +128,24 @@ export default function ProjectHandler() {
   ];
   return (
     <div className="flex flex-col gap-72 my-8">
-      {projects.map((project) =>
-        project.featured ? (
-          <FeaturedProject
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            features={project.features}
-            techStack={project.techStack}
-            video={project.video ?? ""}
-            image1={project.image1}
-            image2={project.image2}
-            image3={project.mobile}
-            githubUrl={project.githubUrl}
-            hostedLink={project.hostedLink}
-          />
-        ) : (
-          <Project
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            features={project.features}
-            techStack={project.techStack}
-            image1={project.image1}
-            image2={project.image2}
-            image3={project.mobile}
-            githubUrl={project.githubUrl}
-            hostedLink={project.hostedLink}
-          />
-        )
-      )}
+      {projects.map((project) => (
+        <FeaturedProject
+          featured={project.featured}
+          key={project.title}
+          title={project.title}
+          description={project.description}
+          features={project.features}
+          mainTech={project.mainTech || []}
+          techStack={project.techStack}
+          video={project.video ?? ""}
+          image1={project.image1}
+          image2={project.image2}
+          image3={project.mobile}
+          githubUrl={project.githubUrl}
+          hostedLink={project.hostedLink}
+          brandImage={project.brandImage || ""}
+        />
+      ))}
     </div>
   );
 }

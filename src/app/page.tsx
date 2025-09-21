@@ -10,6 +10,7 @@ export default function Controller() {
       <Header />
       <Home />
       <Service />
+      <h1 className="text-left font-black text-7xl py-10">My Work</h1>
       <ProjectHandler />
     </PageWrapper>
   );
