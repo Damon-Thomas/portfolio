@@ -62,21 +62,27 @@ export default function FeaturedProject({
         </div>
         {/* Links */}
         <div className="flex flex-col gap-2 sm:gap-4 md:gap-6">
-          {brandImage && (
-            <IconLinkCreator
-              message="Visit the Website"
-              path={brandImage}
-              url={hostedLink}
-              alt={`${title} website redirect link`}
-              className="ml-6"
-            />
-          )}
+          <div className="flex justify-baseline items-center">
+            {brandImage && (
+              <IconLinkCreator
+                message="Visit the Website"
+                path={brandImage}
+                url={hostedLink}
+                alt={`${title} website redirect link`}
+                className="ml-6 w-fit"
+              />
+            )}
+          </div>
 
-          <GitHubLink
-            url={githubUrl}
-            message="Checkout the Code"
-            className="ml-6"
-          />
+          <div className="flex justify-baseline items-center">
+            {githubUrl && (
+              <GitHubLink
+                url={githubUrl}
+                message="Checkout the Code"
+                className="ml-6 w-fit"
+              />
+            )}
+          </div>
         </div>
 
         {/* Landing Image */}

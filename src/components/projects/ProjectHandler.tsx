@@ -91,6 +91,7 @@ export default function ProjectHandler() {
       image2: "/projects/terminal-chat/terminal-chat-profile.png",
       mobile: "/projects/terminal-chat/terminal-chat-mobile.png",
       hostedLink: "https://messaging-app-beta-six.vercel.app/",
+      brandImage: "/projects/terminal-chat/chatFavicon.png",
     },
     {
       featured: false,
@@ -108,6 +109,7 @@ export default function ProjectHandler() {
       mobile:
         "/projects/modern-murmur/blog-api-creator.vercel.app_(iPhone SE).png",
       hostedLink: "https://blog-api-green-mu.vercel.app/",
+      brandImage: "/projects/modern-murmur/MMSimple.png",
     },
     {
       featured: false,
@@ -124,6 +126,7 @@ export default function ProjectHandler() {
       image2: "/projects/finding-fiasco/FindingFiascoHome.png",
       mobile: "/projects/finding-fiasco/wheres-waldo-mobile.png",
       hostedLink: "https://wheres-waldo-gilt.vercel.app/",
+      brandImage: "/projects/finding-fiasco/easyImg.png",
     },
   ];
   return (
