@@ -161,7 +161,7 @@ export default function FeaturedProject({
               Tech & Tools
             </h3>
             <div className="flex gap-2 ">
-              <p className="text-base sm:text-lg md:text-xl font-bold">Core:</p>
+              {/* <p className="text-base sm:text-lg md:text-xl font-bold">Core:</p> */}
               {mainTech.map((tech, idx) => {
                 return (
                   <p className="text-base sm:text-lg md:text-xl font-bold text-nowrap">{`${tech} ${
