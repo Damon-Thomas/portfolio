@@ -87,6 +87,7 @@ export default function ProjectHandler() {
       ],
       techStack: ["Node.js", "React", "Express"],
       githubUrl: "https://github.com/Damon-Thomas/Terminal-Chat",
+      video: "/projects/terminal-chat/TerminalChatDemoVideo.mp4",
       image1: "/projects/terminal-chat/terminalchat-messaging.png",
       image2: "/projects/terminal-chat/terminal-chat-profile.png",
       mobile: "/projects/terminal-chat/terminal-chat-mobile.png",
@@ -104,6 +105,7 @@ export default function ProjectHandler() {
       ],
       techStack: ["React", "Node.js", "Express", "PostgreSQL"],
       githubUrl: "https://github.com/Damon-Thomas/Modern-Murmur",
+      video: "/projects/modern-murmur/MMDemoVideo.mp4",
       image1: "/projects/modern-murmur/blog-api-green-mu.vercel.app_.png",
       image2: "/projects/modern-murmur/blog-api-creator.vercel.app_.png",
       mobile:
@@ -122,6 +124,7 @@ export default function ProjectHandler() {
       ],
       techStack: ["React", "TypeScript", "CSS3"],
       githubUrl: "https://github.com/Damon-Thomas/Finding-Fiasco",
+      video: "/projects/finding-fiasco/FFDemoVideo.mp4",
       image1: "/projects/finding-fiasco/finding-fiasco-game.png",
       image2: "/projects/finding-fiasco/FindingFiascoHome.png",
       mobile: "/projects/finding-fiasco/wheres-waldo-mobile.png",
