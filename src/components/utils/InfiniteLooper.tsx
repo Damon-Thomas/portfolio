@@ -5,10 +5,12 @@ export default function InfiniteLooper({
   speed,
   direction,
   children,
+  id = "looper",
 }: {
   speed: number;
   direction: "right" | "left";
   children: React.ReactNode;
+  id?: string;
 }) {
   const [looperInstances, setLooperInstances] = useState(3);
   const outerRef = useRef<HTMLDivElement>(null);
@@ -44,15 +46,17 @@ export default function InfiniteLooper({
         className="looper__innerList flex gap-8"
         ref={innerRef}
         data-animate="true"
-        style={{
-          animationDuration: `${speed}s`,
-          animationDirection: direction === "right" ? "reverse" : "normal",
-          "--translate-percentage": `-${100 / looperInstances}%`,
-        } as React.CSSProperties & { "--translate-percentage": string }}
+        style={
+          {
+            animationDuration: `${speed}s`,
+            animationDirection: direction === "right" ? "reverse" : "normal",
+            "--translate-percentage": `-${100 / looperInstances}%`,
+          } as React.CSSProperties & { "--translate-percentage": string }
+        }
       >
         {[...Array(looperInstances)].map((_, ind) => (
           <div
-            key={ind}
+            key={`${id}-instance-${ind}`}
             className="looper__listInstance flex gap-8"
           >
             {children}

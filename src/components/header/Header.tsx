@@ -66,18 +66,20 @@ export default function Header() {
 
   // Desktop Header
   return (
-    <div
-      className="flex z-40 fixed top-4 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6 justify-between items-center rounded-2xl h-fit px-4 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
-        "
-    >
-      <div className={`grid gap-4 grid-cols-[repeat(6,minmax(0,1fr))]`}>
-        {headerLinks.map((link) => (
-          <HeaderButton key={link.name} onClick={() => {}}>
-            {link.name}{" "}
-          </HeaderButton>
-        ))}
+    <div className="flex justify-center z-40 fixed top-4 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6">
+      <div
+        className="max-w-[1500px] flex w-full  justify-between items-center rounded-2xl h-fit px-4 bg-[var(--background)] text-[var(--foreground)] border-b border-[var(--themeBorder)] shadow-[var(--themeShadowColor)_0px_0px_10px_2px] hover:shadow-[var(--themeShadowColor)_0px_0px_15px_3px] transition-visual
+          "
+      >
+        <div className={`grid gap-4 grid-cols-[repeat(6,minmax(0,1fr))]`}>
+          {headerLinks.map((link) => (
+            <HeaderButton key={link.name} onClick={() => {}}>
+              {link.name}{" "}
+            </HeaderButton>
+          ))}
+        </div>
+        <ThemeSwitcher inLine />
       </div>
-      <ThemeSwitcher inLine />
     </div>
   );
 }

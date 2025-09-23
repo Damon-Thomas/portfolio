@@ -112,8 +112,11 @@ export default function FeaturedProject({
                 Features
               </h3>
               <ul className="flex flex-col w-full !list-disc ml-4">
-                {features.map((feature) => (
-                  <li key={feature} className="text-left text-lg">
+                {features.map((feature, index) => (
+                  <li
+                    key={`${title}-feature-${index}-${feature}`}
+                    className="text-left text-lg"
+                  >
                     {feature}
                   </li>
                 ))}
@@ -124,8 +127,11 @@ export default function FeaturedProject({
                 Another
               </h3>
               <ul className="flex flex-col w-full !list-disc ml-4">
-                {features.map((feature) => (
-                  <li key={feature + "2"} className="text-left text-lg">
+                {features.map((feature, index) => (
+                  <li
+                    key={`${title}-feature-alt-${index}-${feature}`}
+                    className="text-left text-lg"
+                  >
                     {feature}
                   </li>
                 ))}
@@ -164,9 +170,10 @@ export default function FeaturedProject({
               {/* <p className="text-base sm:text-lg md:text-xl font-bold">Core:</p> */}
               {mainTech.map((tech, idx) => {
                 return (
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-nowrap">{`${tech} ${
-                    idx === mainTech.length - 1 ? "" : " • "
-                  }`}</p>
+                  <p
+                    key={`${title}-maintech-${idx}-${tech}`}
+                    className="text-base sm:text-lg md:text-xl font-bold text-nowrap"
+                  >{`${tech} ${idx === mainTech.length - 1 ? "" : " • "}`}</p>
                 );
               })}
             </div>
@@ -176,8 +183,12 @@ export default function FeaturedProject({
               <InfiniteLooper
                 speed={20}
                 direction="right"
-                children={techStack.map((tech) => (
-                  <div className="text-left text-lg">
+                id={`${title}-techstack`}
+                children={techStack.map((tech, index) => (
+                  <div
+                    key={`${title}-techstack-${index}-${tech}`}
+                    className="text-left text-lg"
+                  >
                     <img
                       src={getTechStackIcon(tech)}
                       className={`w-10 h-10 filter  `}
