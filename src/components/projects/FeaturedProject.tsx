@@ -19,6 +19,7 @@ export default function FeaturedProject({
   githubUrl,
   hostedLink,
   brandImage,
+  className,
   featured = true,
 }: {
   title: string;
@@ -33,16 +34,19 @@ export default function FeaturedProject({
   githubUrl: string;
   hostedLink: string;
   brandImage?: string;
+  className?: string;
   featured?: boolean;
 }) {
   // const { theme } = useAppTheme();
   return (
     //Featured Project Section
 
-    <div className="flex relative gap-2 border-b-2 sm:gap-4 p-2 sm:p-4 md:p-6 ">
+    <div
+      className={`${className} flex relative gap-2 border-y-2 sm:gap-4 p-2 sm:p-4 md:p-6`}
+    >
       {featured && (
         <div className="absolute -translate-6 overflow-hidden w-30 h-30">
-          <div className="bg-foreground text-background flex flex-col justify-end items-center font-black -rotate-45 px-10 h-20 w-40 absolute -top-5 -left-15">
+          <div className="bg-foreground text-background flex flex-col justify-end items-center font-black -rotate-45 px-10 h-20 w-40 absolute -top-7 -left-27">
             <p>Featured</p>
           </div>
         </div>

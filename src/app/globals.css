@@ -6,6 +6,7 @@
   --backgroundText: #ffffff;
   --foreground: #0a0a0a;
   --foregroundRGB: 10, 10, 10;
+  --foregroundAccentRGB: 135, 135, 135;
   --banner: #9b9898ac;
   --primary: #9c5552;
   --themeShadowColor: #0a0a0a;
@@ -26,6 +27,8 @@
 
   --foreground: #ffffff;
   --foregroundRGB: 255, 255, 255;
+  --foregroundAccentRGB: 130, 130, 130;
+
   --primary: #9c5552;
   --themeShadowColor: #ededed;
   --themeBorder: #0a0a0a;

@@ -1,5 +1,23 @@
+"use client";
+
+import EmblaCarousel from "../carousel/EmblaCarousel";
 import FeaturedProject from "./FeaturedProject";
-import Project from "./Project";
+
+type projectType = {
+  title: string;
+  description: string;
+  features: string[];
+  mainTech: string[];
+  techStack: string[];
+  video: string;
+  image1: string;
+  image2?: string;
+  mobile?: string;
+  githubUrl: string;
+  hostedLink: string;
+  brandImage?: string;
+  featured?: boolean;
+};
 
 export default function ProjectHandler() {
   const projects = [
@@ -38,8 +56,8 @@ export default function ProjectHandler() {
       image1: "/projects/zuno/Zuno Homepage.png",
       image2: "/projects/zuno/zuno-dashboard-full.png",
       mobile: "/projects/zuno/zuno-dashboard(iPhone SE).png",
-      image4: "/projects/zuno/zuno-connections.png",
-      image5: "/projects/zuno/zuno.damonthomas.dev-post.png",
+      // image4: "/projects/zuno/zuno-connections.png",
+      // image5: "/projects/zuno/zuno.damonthomas.dev-post.png",
       hostedLink: "https://zuno.damonthomas.dev/",
       brandImage: "/projects/zuno/zuno192x192.png",
     },
@@ -78,7 +96,7 @@ export default function ProjectHandler() {
       featured: false,
       title: "Terminal Chat",
       description:
-        "A terminal-based chat application for real-time communication.",
+        "A terminal-based chat application for connection and group communication.",
       features: [
         "Create your profile",
         "User authentication",
@@ -194,26 +212,34 @@ export default function ProjectHandler() {
       brandImage: "/projects/finding-fiasco/easyImg.png",
     },
   ];
+
+  const projectElements = projects.map((project: projectType) => (
+    <FeaturedProject
+      featured={project.featured}
+      key={project.title}
+      title={project.title}
+      description={project.description}
+      features={project.features}
+      mainTech={project.mainTech || []}
+      techStack={project.techStack}
+      video={project.video ?? ""}
+      image1={project.image1}
+      image2={project.image2}
+      image3={project.mobile}
+      githubUrl={project.githubUrl}
+      hostedLink={project.hostedLink}
+      brandImage={project.brandImage || ""}
+      className={"embla__slide"}
+    />
+  ));
+
+  const options = {
+    containScroll: false as false,
+  };
+
   return (
-    <div className="flex flex-col gap-72 my-8">
-      {projects.map((project) => (
-        <FeaturedProject
-          featured={project.featured}
-          key={project.title}
-          title={project.title}
-          description={project.description}
-          features={project.features}
-          mainTech={project.mainTech || []}
-          techStack={project.techStack}
-          video={project.video ?? ""}
-          image1={project.image1}
-          image2={project.image2}
-          image3={project.mobile}
-          githubUrl={project.githubUrl}
-          hostedLink={project.hostedLink}
-          brandImage={project.brandImage || ""}
-        />
-      ))}
+    <div className="flex flex-col">
+      <EmblaCarousel slides={projectElements} options={options} />
     </div>
   );
 }

@@ -10,8 +10,10 @@ export default function Controller() {
       <Header />
       <Home />
       <Service />
-      <h1 className="text-left font-black text-7xl py-10">My Work</h1>
-      <ProjectHandler />
+      <div className="p-2 sm:p-4 md:p-6 ">
+        <h1 className="text-left font-black text-7xl py-4">My Work</h1>
+        <ProjectHandler />
+      </div>
     </PageWrapper>
   );
 }
