@@ -238,8 +238,11 @@ export default function ProjectHandler() {
   };
 
   return (
-    <div className="flex flex-col">
-      <EmblaCarousel slides={projectElements} options={options} />
+    <div className="p-2 sm:p-4 md:p-6 ">
+      <h1 className="text-left font-black text-7xl py-4">My Work</h1>
+      <div className="flex flex-col">
+        <EmblaCarousel slides={projectElements} options={options} />
+      </div>{" "}
     </div>
   );
 }
